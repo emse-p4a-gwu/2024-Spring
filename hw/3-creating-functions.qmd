@@ -1,0 +1,13 @@
+---
+title: "Homework 3 - Creating Functions"
+params:
+  number: 3
+  purpose: |
+    The purposes of this assignment are:
+    >
+    > - To practice creating your own functions in R from scratch.
+    > - To practice writing code _using good style_.
+    > - To practice problem solving (e.g. using Polya's technique).
+---
+
+Coming soon!

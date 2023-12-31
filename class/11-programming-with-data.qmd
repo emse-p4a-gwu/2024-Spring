@@ -1,0 +1,7 @@
+---
+title: "Programming with Data"
+params:
+  class: "11-programming-with-data"
+---
+
+Coming soon!

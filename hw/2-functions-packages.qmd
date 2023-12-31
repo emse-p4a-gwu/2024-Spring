@@ -1,0 +1,19 @@
+---
+title: "Homework 2 - Functions & Packages"
+params:
+  number: 2
+  purpose: |
+    The purposes of this assignment are:
+    >
+    > - To practice using functions in R.
+    > - To practice converting data types in R.
+    > - To practice installing, loading, and using external packages.
+    >
+    > **Skills & Knowledge**: After completing these exercises, you should be able to:
+    >
+    > - Be familiar with how to specify arguments in functions.
+    > - Be comfortable converting data between logical, character, and numeric types.
+    > - Be comfortable installing external libraries and accessing functions in them.
+---
+
+Coming soon!

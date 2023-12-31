@@ -1,0 +1,12 @@
+---
+title: "Homework 7 - Strings"
+params:
+  number: 7
+  purpose: |
+    The purposes of this assignment are:
+    >
+    > - To practice manipulating strings in R with the **stringr** package.
+    > - To practice computational problem solving with strings.
+---
+
+Coming soon!

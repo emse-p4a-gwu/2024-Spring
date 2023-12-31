@@ -1,0 +1,23 @@
+Read and reflect on the following readings to preview what we will be covering next:
+
+<blockquote class="blockquote">
+
+```{r}
+#| echo: false
+#| message: false
+#| results: asis
+
+htmltools::HTML(readings_next)
+```
+
+</blockquote>
+
+Afterwards, reflect on what you've learned while going through these readings and exercises. Is there anything that jumped out at you? Anything you found particularly interesting or confusing?
+
+In a comment (`#`) in your .R file, write at least a paragraph about your thoughts, and include at least one question. This can be on what you've learned and any questions or points of confusion you have about what we've covered thus far. This can be related to this assignment, next week's readings, things going on in the world that remind you something from class, etc. If there's anything that jumped out at you, write it down.
+
+Some thoughts you may want to try in your reflection:
+
+- "I used to think ______, now I think ______ 🤔"
+- Discuss some of the key insights or things you found interesting in the readings or recent class periods.
+- Connect the course content to your own work or projects you're working on.

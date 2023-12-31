@@ -1,0 +1,13 @@
+---
+title: "Homework 4 - Conditionals & Testing"
+params:
+  number: 4
+  purpose: |
+    The purposes of this assignment are:
+    >
+    > - To practice using conditional statements while writing functions in R.
+    > - To practice the skill of writing and using test functions to understand the problem.
+    > - To practice computational problem solving.
+---
+
+Coming soon!

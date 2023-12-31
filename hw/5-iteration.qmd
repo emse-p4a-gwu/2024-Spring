@@ -1,0 +1,12 @@
+---
+title: "Homework 5 - Iteration"
+params:
+  number: 5
+  purpose: |
+    The purposes of this assignment are:
+    >
+    > - To practice using for and while loops in R.
+    > - To practice computational problem solving with loops.
+---
+
+Coming soon!
