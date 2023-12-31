@@ -1,7 +1,0 @@
----
-title: "Getting Started"
-params:
-  class: "1-getting-started"
----
-
-Coming soon!

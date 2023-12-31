@@ -1,7 +1,0 @@
----
-title: "Strings"
-params:
-  class: "7-strings"
----
-
-Coming soon!

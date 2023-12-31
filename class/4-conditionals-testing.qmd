@@ -1,7 +1,0 @@
----
-title: "Conditionals & Testing"
-params:
-  class: "4-conditionals-testing"
----
-
-Coming soon!

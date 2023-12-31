@@ -1,7 +1,0 @@
----
-title: "Functions & Packages"
-params:
-  class: "2-functions-packages"
----
-
-Coming soon!

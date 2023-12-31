@@ -1,7 +1,0 @@
----
-title: "Monte Carlo Methods"
-params:
-  class: "13-monte-carlo-methods"
----
-
-Coming soon!

@@ -1,7 +1,0 @@
----
-title: "Creating Functions"
-params:
-  class: "3-creating-functions"
----
-
-Coming soon!
