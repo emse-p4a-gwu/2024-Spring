@@ -98,6 +98,22 @@ Quizzes are **short** (10 minutes) and are designed to test for fluency and to d
 
 There will be one midterm exam covering the first 6 weeks of class, and a standard final exam during the final exam period at the end of the semester covering material from the entire semester. See the [schedule](schedule.html) for details.
 
+## Skill Challenges
+
+You can earn a 1% bonus to your final grade by beating Professor Helveston in one of the following skill challenges (yes, this is 100% for real):
+
+1. **Speed typing**: In a head-to-head competition on [monkeytype.com/](https://monkeytype.com/), if you type faster than Professor Helveston in a 30 second challenge, you'll earn the bonus.
+2. *Chess Match**: Beat Professor Helveston in a blitz (3 minute) game of chess and you'll earn the bonus.
+
+**Rules**:
+
+- You may only challenge Professor Helveston twice in one semester (either once for each skill, or twice for a single skill).
+- You will earn 1% for each successful skill challenge (meaning you could earn 2% if you win both).
+- To challenge Professor Helveston, send him a direct message on Slack saying "I accept your challenge!", then we will work out a time and place to carry out the challenge.
+- If you lose the challenge, there will be no consequences, only the benefit of having (hopefully) improved your typing or chess skills by practicing for it.
+
+**Wait, Why?** Both of these skills (typing, and strategic thinking) are useful skills that complement your coding skills. Typing faster and more accurately will improve your coding productivity, and strategic games like chess challenge you to think of new and different ways to problem solve.
+
 # Grading
 
 ## Standard Grading
@@ -193,7 +209,9 @@ The course instructors may choose to change the scales at their discretion. You 
 
 ## Rounding
 
-**I do not round final grades**. Rather, I grade generously throughout the semester. For example, if you give a quiz your best shot and completely fail it, you will likely get a 50% instead of a 0%. The 50% is for trying (if you simply don't take it, you'll get a 0%). As a result, I will not modify or round your final score, even if you're very close to a different letter grade (e.g., a 93.98 is an "A-" and will not be rounded up to an "A").
+**I do not round final grades**. Here's why. Wherever the line is drawn, there will always be students just below or just above, and rounding will only move that bar and create another group of students who are just below and just above. Rounding does not eliminate the issue but rather just shifts it to another group of students. This is why I draw the lines before the course starts - to ensure a fair and transparent system for everyone, that way you don't have to shoot for a moving bar. To be clear, this means I will not modify or round your final score, even if you're _very close_ to a different letter grade (e.g., a 93.98 is an "A-" and will not be rounded up to an "A").
+
+Rather than round, I grade generously throughout the semester. For example, if you give a quiz your best shot and completely fail it, you will likely get a 50% instead of a 0%. The 50% is for trying as there's still some learning that happens when you try (0s are reserved for those who simply don't take it).
 
 # Getting Help
 
