@@ -104,16 +104,16 @@ You can earn a 1% bonus to your final grade by beating Professor Helveston in a 
 
 **Rules**:
 
-- In a head-to-head competition on [monkeytype.com/](https://monkeytype.com/), if you type faster than Professor Helveston in a 30 second challenge, you'll earn the bonus.
+- If you type faster than Professor Helveston in a 30 second head-to-head competition on [monkeytype.com](https://monkeytype.com/), you'll earn the bonus.
 - You may challenge Professor Helveston up to two times in one semester, but you may only win the bonus once.
 - To challenge Professor Helveston, send him a direct message on Slack saying "I accept your challenge!", then we will work out a time and place to carry out the challenge.
 - If you lose the challenge, there will be no consequences other than the benefit of having (hopefully) improved your typing speed.
 
 **Wait, are you serious?** Yes, I'm 100% serious.
 
-**Why tho?** Not being able to [touch type](https://en.wikipedia.org/wiki/Touch_typing) can be a real hindrance when it comes to using a computer, and it's especially important in a coding class where we will be typing a lot. Improving your typing speed and accuracy will not only improve your coding productivity, but also your productivity with pretty much everything else you do on a computer (like writing). By putting this challenge in place, my goal is that you will spend a little time practice your typing.
+**Why tho?** Not being able to [touch type](https://en.wikipedia.org/wiki/Touch_typing) can be a real hindrance when it comes to using a computer, and it's especially important in a coding class where we will be typing a lot. Improving your typing speed and accuracy will not only improve your coding productivity, but also your productivity with pretty much everything else you do on a computer (like writing). By putting this challenge in place, my goal is that you will spend a little time practicing your typing.
 
-**How do I get better at typing**? I recommend using [keybr.com](https://www.keybr.com/)) and setting ~60 words per minute as a reasonable target. It's well worth the effort, and if you spend a little time each day you'll see improvement. Consistency is more important than length of time in any one practice session. Also, if you create an account and track your typing progress, I'll also consider your progress for the challenge. That is, even if you lose the challenge but can demonstrate significant progress in your typing speed, I'll take that into consideration as to whether to award you the bonus.
+**How can I get better at typing**? I recommend using [keybr.com](https://www.keybr.com/) and setting ~60 words per minute as a reasonable target (~90 if you want to beat Professor Helveston). It's well worth the effort, and if you spend a little time each day you'll see improvement. Consistency is more important than length of time in any one practice session. Also, if you create an account and track your typing progress, I'll also consider your progress for the challenge. That is, even if you lose the challenge but can demonstrate significant progress in your typing speed, I'll take that into consideration as to whether to award you the bonus.
 
 # Grading
 
