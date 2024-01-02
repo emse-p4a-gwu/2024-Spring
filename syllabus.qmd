@@ -98,21 +98,22 @@ Quizzes are **short** (10 minutes) and are designed to test for fluency and to d
 
 There will be one midterm exam covering the first 6 weeks of class, and a standard final exam during the final exam period at the end of the semester covering material from the entire semester. See the [schedule](schedule.html) for details.
 
-## Skill Challenges
+## Typing Challenge
 
-You can earn a 1% bonus to your final grade by beating Professor Helveston in one of the following skill challenges (yes, this is 100% for real):
-
-1. **Speed typing**: In a head-to-head competition on [monkeytype.com/](https://monkeytype.com/), if you type faster than Professor Helveston in a 30 second challenge, you'll earn the bonus.
-2. *Chess Match**: Beat Professor Helveston in a blitz (3 minute) game of chess and you'll earn the bonus.
+You can earn a 1% bonus to your final grade by beating Professor Helveston in a speed typing challenge.
 
 **Rules**:
 
-- You may only challenge Professor Helveston twice in one semester (either once for each skill, or twice for a single skill).
-- You will earn 1% for each successful skill challenge (meaning you could earn 2% if you win both).
+- In a head-to-head competition on [monkeytype.com/](https://monkeytype.com/), if you type faster than Professor Helveston in a 30 second challenge, you'll earn the bonus.
+- You may challenge Professor Helveston up to two times in one semester, but you may only win the bonus once.
 - To challenge Professor Helveston, send him a direct message on Slack saying "I accept your challenge!", then we will work out a time and place to carry out the challenge.
-- If you lose the challenge, there will be no consequences, only the benefit of having (hopefully) improved your typing or chess skills by practicing for it.
+- If you lose the challenge, there will be no consequences other than the benefit of having (hopefully) improved your typing speed.
 
-**Wait, Why?** Both of these skills (typing, and strategic thinking) are useful skills that complement your coding skills. Typing faster and more accurately will improve your coding productivity, and strategic games like chess challenge you to think of new and different ways to problem solve.
+**Wait, are you serious?** Yes, I'm 100% serious.
+
+**Why tho?** Not being able to [touch type](https://en.wikipedia.org/wiki/Touch_typing) can be a real hindrance when it comes to using a computer, and it's especially important in a coding class where we will be typing a lot. Improving your typing speed and accuracy will not only improve your coding productivity, but also your productivity with pretty much everything else you do on a computer (like writing). By putting this challenge in place, my goal is that you will spend a little time practice your typing.
+
+**How do I get better at typing**? I recommend using [keybr.com](https://www.keybr.com/)) and setting ~60 words per minute as a reasonable target. It's well worth the effort, and if you spend a little time each day you'll see improvement. Consistency is more important than length of time in any one practice session. Also, if you create an account and track your typing progress, I'll also consider your progress for the challenge. That is, even if you lose the challenge but can demonstrate significant progress in your typing speed, I'll take that into consideration as to whether to award you the bonus.
 
 # Grading
 
