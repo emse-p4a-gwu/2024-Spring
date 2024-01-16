@@ -308,16 +308,16 @@ Cheating on quizzes, assignments, or the final project can include:
 
 ### Use of chatGPT and other AI tools
 
-Large language models (LLMs) are capable of producing exact solutions to some of the coding problems assigned in this class. So we all basically have a solutions manual available for free.
+Large language models (LLMs) are capable of producing exact solutions to many of the coding problems assigned in this class. That means we all basically have a solutions manual available for free.
 
-With this in mind, the use of AI tools is permitted as follows:
+With this in mind, the use of AI is permitted as follows:
 
-- **Assignments 1-7**: Not permitted. Copying solutions from these engines and submitting them as your own for these assignments will be considered cheating. In this section of the course, we are building foundational skills in computational thinking and problem solving. If you don't master these skills, you won't be able to interpret what chatGPT is giving you, and you won't be able to test if it is wrong. Master these skills first - it is worth the effort.
-- **Assignments 8-13**: Permitted, with caveats. If you do use AI tools on these assignments, you must include the prompt(s) you used as well as changed to made to them to get better results to receive full credit.
+- **Assignments 1-7**: AI tools are **not permitted** unless explicitly instructed. Copying code from an AI tool and submitting it as your own for these assignments will be considered cheating. In this section of the course, we are building foundational skills in computational thinking and problem solving. If you don't master these skills, you won't be able to interpret what chatGPT is giving you, and you won't be able to test if it is wrong. Master these skills first - it is worth the effort.
+- **Assignments 8-13**: AI tools are permitted, with caveats. If you do use an AI tool on these assignments, you must include a link to the chat conversation you had to receive full credit.
 
 Learn to use tools like ChatGPT as a learning assistant - a tool to help you accomplish the task - rather than just a solutions manual. One version of using it makes you a better and more efficient coder, the other robs you of that.
 
-In the follow-on course to this one ([EMSE 4572: Exploratory Data Analysis](https://eda.seas.gwu.edu/)), the use of AI engines will be allowed to support your projects.
+In the follow-on course to this one ([EMSE 4572: Exploratory Data Analysis](https://eda.seas.gwu.edu/)), the use of AI will be allowed to support your projects.
 
 ### Penalties
 
