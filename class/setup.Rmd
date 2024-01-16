@@ -64,7 +64,7 @@ class: middle, inverse
 .leftcol30[
 
 <center>
-<img src="https://github.com/emse-p4a-gwu/emse-p4a-gwu.github.io/raw/master/images/p4a_hex_sticker.png" width=250>
+<img src="https://github.com/emse-p4a-gwu/emse-p4a-gwu.github.io/blob/master/images/logo.png?raw=true" width=250>
 </center>
 
 ]
