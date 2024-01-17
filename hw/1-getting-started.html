@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -242,9 +276,149 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Coming soon!</p>
+<blockquote class="blockquote">
+<p><strong>Due</strong>: Jan 24 by 11:59pm</p>
+<p><strong>Weight</strong>: This assignment is worth 4% of your final grade.</p>
+<p><strong>Purpose</strong>: The purposes of this assignment are to:</p>
+<ul>
+<li>Make sure you understand what you need to do to succeed in this class</li>
+<li>Make sure you have properly set up the software and tools we will use this semester</li>
+<li>Get started practicing basic concepts with R.</li>
+</ul>
+<p><strong>Skills &amp; Knowledge</strong>: After completing these exercises, you should:</p>
+<ul>
+<li>Be familiar with the main course tools: Slack, R, and RStudio.</li>
+<li>Be familiar how to use R projects to stay organized.</li>
+<li>Be able to use R to create and store values as objects with meaningful names.</li>
+<li>Know how to compare values in R.</li>
+<li>Know how to use arithmetic, relational, and logical operators in R.</li>
+<li>Know the distinctions between how R handles different types of data types (numbers, strings, &amp; logicals).</li>
+</ul>
+<p><strong>Assessment</strong>: Each question indicates the % of the assignment grade, summing to 100%. The credit for each question will be assigned as follows:</p>
+<ul>
+<li>0% for not attempting a response.</li>
+<li>50% for attempting the question but with <em>major</em> errors.</li>
+<li>75% for attempting the question but with <em>minor</em> errors.</li>
+<li>100% for correctly answering the question.</li>
+</ul>
+<p>The reflection portion is always worth 10% and graded for completion.</p>
+<p><strong>Rules</strong>:</p>
+<ul>
+<li>Problems marked <strong>SOLO</strong> may not be worked on with other classmates, though you may consult instructors for help.</li>
+<li>For problems marked <strong>COLLABORATIVE</strong>, you may work in groups of up to 3 students who are in this course this semester. You may not split up the work – everyone must work on every problem. And you may not simply copy any code but rather truly work together and submit your own solutions.</li>
+</ul>
+</blockquote>
+<section id="readings" class="level3">
+<h3 class="anchored" data-anchor-id="readings">Readings</h3>
+<p>The readings from the last week will serve as a helpful reference as you complete this assignment. You can review them here:</p>
+<blockquote class="blockquote">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<a href="https://p4a.jhelvy.com/getting-started.html" target="_blank"><b>Getting Started</b></a><br><a href="https://p4a.jhelvy.com/operators-data-types.html" target="_blank"><b>Operations &amp; Data Types</b></a>
+</div>
+</div>
+</blockquote>
+</section>
+<section id="class-setup-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="class-setup-solo-10">1) Class setup [SOLO, 10%]</h3>
+<p>For this class, you’ll need to install some software and register for some tools. You should have already done this, but in case you haven’t,go to the course <a href="../software.html">software</a> page to get set up.</p>
+<p>Once you have joined the <a href="https://emse-p4a-s24.slack.com">class slack</a>, make a post to the <code>#welcome</code> channel introducing yourself - provide your name, year / program, and something interesting about yourself.</p>
+</section>
+<section id="getting-familiar-with-the-course-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="getting-familiar-with-the-course-solo-10">2) Getting familiar with the course [SOLO, 10%]</h3>
+<p>Follow <a href="https://www.youtube.com/watch?v=Tnlaokj1opA">Snoop’s advice</a> and read the entire <a href="../syllabus.html">Course Syllabus</a> (actually read the whole thing). Then review the <a href="../schedule.html">schedule</a> and make sure to note important upcoming deadlines.</p>
+</section>
+<section id="staying-organized-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="staying-organized-solo-10">3) Staying organized [SOLO, 10%]</h3>
+<p>Open RStudio and create a new R project called “hw1” (see the <a href="https://p4a.jhelvy.com/getting-started.html#rstudio-projects" target="_blank">reading</a> for details on how to do this). Within your project, create a new R <em>script</em> (a “.R” file) and save it as “hw1.R”. When you save it, it should show up in the R project folder you just created. Finally, copy the following code to the top of this script and fill out your name, netID, and the names of anyone you worked with on this assignment (your netID is the part of your email address before <code>"@gwu.edu"</code>):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Name:  Last, First</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># netID: Insert your netID here</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># I worked with the following classmates on this assignment:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Name: Last, First</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Name: Last, First</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Write your responses to all other questions in this assignment in your R file.</p>
+</section>
+<section id="objects-operators-converting-time-collaborative-20" class="level3">
+<h3 class="anchored" data-anchor-id="objects-operators-converting-time-collaborative-20">4) Objects &amp; Operators: Converting Time [COLLABORATIVE, 20%]</h3>
+<p>Create objects to store each of the following two values - be sure to use <a href="https://p4a.jhelvy.com/getting-started.html#use-meaningful-variable-names" target="_blank">meaningful variable names</a> when creating your objects:</p>
+<ul>
+<li>The number of seconds in a minute</li>
+<li>The number of minutes in an hour</li>
+<li>The number of hours in a day</li>
+<li>The number of days in a typical year (not a leap year)</li>
+</ul>
+<p>Now, say you have another object called <code>time_in_seconds</code> that contains an integer number of seconds (for example, <code>time_in_seconds &lt;- 8675309</code>). Write code to convert the value stored in <code>time_in_seconds</code> into the units described below. Your solution may only use arithmetic operators and the objects you created (i.e.&nbsp;you may <strong>not</strong> use any numbers). You may also use the new objects you create in sequential order. For example, you may use the object created in part a) to create the object in part b), and so on.</p>
+<ol type="a">
+<li>The value of <code>time_in_seconds</code> in minutes</li>
+<li>The value of <code>time_in_seconds</code> in hours</li>
+<li>The value of <code>time_in_seconds</code> in days</li>
+<li>The value of <code>time_in_seconds</code> in years</li>
+</ol>
+</section>
+<section id="logical-and-relational-operators-solo-20" class="level3">
+<h3 class="anchored" data-anchor-id="logical-and-relational-operators-solo-20">5) Logical and relational operators [SOLO, 20%]</h3>
+<p>Consider the following objects:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Write code to answer the following questions:</p>
+<ol type="a">
+<li>Write a statement with <em>logical</em> operators that compares the objects <code>x</code>, <code>y</code>, and <code>z</code> and returns <code>TRUE</code></li>
+<li>Write a statement with <em>logical</em> operators that compares the objects <code>x</code>, <code>y</code>, and <code>z</code> and returns <code>FALSE</code></li>
+<li>Fill in <em>relational</em> operators to make the following statement return <code>TRUE</code>:</li>
+</ol>
+<p><code>! (x __ y) &amp; ! (z __ y)</code></p>
+<ol start="4" type="a">
+<li>Fill in <em>relational</em> operators to make this statement return <code>FALSE</code>:</li>
+</ol>
+<p><code>! (w __ y) | (z __ y)</code></p>
+</section>
+<section id="data-types-collaborative-20" class="level3">
+<h3 class="anchored" data-anchor-id="data-types-collaborative-20">6) Data types [COLLABORATIVE, 20%]</h3>
+<p>Consider the following objects:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>number    <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="st">'3'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="dv">7</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>false     <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="st">"FALSE"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>true      <span class="ot">&lt;-</span> <span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Write code to answer the following questions:</p>
+<ol type="a">
+<li>Write a statement with both <em>relational</em> &amp; <em>logical</em> operators that compares the four objects <code>number</code>, <code>character</code>, <code>false</code>, and <code>true</code> and returns <code>TRUE</code>.</li>
+<li>Write a statement with both <em>relational</em> &amp; <em>logical</em> operators that compares the four objects <code>number</code>, <code>character</code>, <code>false</code>, and <code>true</code> and returns <code>FALSE</code>.</li>
+</ol>
+</section>
+<section id="read-and-reflect-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">7) Read and reflect [SOLO, 10%]</h3>
+<p>Read and reflect on the following readings to preview what we will be covering next:</p>
+<blockquote class="blockquote">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<a href="https://p4a.jhelvy.com/functions-packages.html" target="_blank"><b>Functions &amp; Packages</b></a>
+</div>
+</div>
+</blockquote>
+<p>Afterwards, reflect on what you’ve learned while going through these readings and exercises. Is there anything that jumped out at you? Anything you found particularly interesting or confusing?</p>
+<p>In a comment (<code>#</code>) in your .R file, write at least a paragraph about your thoughts, and include at least one question. This can be on what you’ve learned and any questions or points of confusion you have about what we’ve covered thus far. This can be related to this assignment, next week’s readings, things going on in the world that remind you something from class, etc. If there’s anything that jumped out at you, write it down.</p>
+<p>Some thoughts you may want to try in your reflection:</p>
+<ul>
+<li>“I used to think ______, now I think ______ 🤔”</li>
+<li>Discuss some of the key insights or things you found interesting in the readings or recent class periods.</li>
+<li>Connect the course content to your own work or projects you’re working on.</li>
+</ul>
+</section>
+<section id="submit" class="level3">
+<h3 class="anchored" data-anchor-id="submit">Submit</h3>
+<p>Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
