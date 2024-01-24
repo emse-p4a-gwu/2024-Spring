@@ -105,7 +105,7 @@ Finally, use the `paste()` function to merge your super hero's name and power in
 
 ### 5) Installing packages from Github: the **BRRR** package [SOLO, 10%]
 
-The vast majority of the time, you will install external packages using the `install.packages()` function. This installs packages from the [Comprehensive R Archive Network](https://cran.r-project.org/) (CRAN), where most packages are published. But you can also install packages that are under development or haven't been published to CRAN yet. Most of the time, these packages are hosted on GitHub - an online platform for sharing code (it's also where all of the files that make up this website are [stored](https://github.com/emse-p4a-gwu/2023-Spring/)).
+The vast majority of the time, you will install external packages using the `install.packages()` function. This installs packages from the [Comprehensive R Archive Network](https://cran.r-project.org/) (CRAN), where most packages are published. But you can also install packages that are under development or haven't been published to CRAN yet. Most of the time, these packages are hosted on GitHub - an online platform for sharing code (it's also where all of the files that make up this website are [stored]({{< var repo >}})).
 
 To install a package from GitHub, you first need to install the **remotes** package. Then you can use the `remotes::install_github()` function to install packages directly from GitHub. To try this out, install the **remotes** package, then trying installing the **BRRR** package:
 
@@ -149,6 +149,4 @@ d) Using what you've learned about how to manipulate your turtle, write **two di
 
 ### Submit
 
-Instructions for how to submit your assignment are at the [top of this page]().
-
-
+Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.
