@@ -14,6 +14,6 @@ zip::zip(
     files = c(
         # 'data',
         'practice.R', 
-        # 'practice-solutions.R',
+        'practice-solutions.R',
         paste0(lesson, ".Rproj"))
 )
