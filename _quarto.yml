@@ -51,6 +51,9 @@ website:
       - text: Software
         icon: download
         href: software.qmd
+      - text: FAQ
+        icon: question-square-fill
+        href: faq.qmd
       - text: References
         icon: bookmark-fill
         href: references.qmd
@@ -64,7 +67,7 @@ website:
         icon: clock-fill
         href: https://jhelvy.appointlet.com/b/professor-helveston
       - section: Other
-        icon: question-circle-fill
+        icon: box-fill
         contents:
           - text: About
             icon: question-circle-fill

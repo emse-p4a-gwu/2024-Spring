@@ -1,0 +1,32 @@
+---
+title: "Frequenly Asked Questions"
+toc: true
+toc-title: FAQ
+toc-location: right
+---
+
+## Where can I see my grades?
+
+[box.com](https://box.com/)
+
+I do **not** use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named `netID-p4a`. For example, my netID is `jph`, so my folder would be `jph-p4a`. 
+
+If you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.
+
+## When can I expect to see a grade for my assignment?
+
+Since homeworks are due the night before class, I usually can't grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade **one week after submitting it**.
+
+## How do I make a zip file for my homework?
+
+[**Mac**](https://www.youtube.com/watch?v=62tw3wZvQxs&t=23s)
+
+[**Windows**](https://youtu.be/E5qBvtxmBC4?si=Rekeo5C4RHTQd87G&t=30)
+
+## I got this error message
+
+> `could not find function "functionName"`
+
+- Did you load the package that contains `functionName`?
+- Did you spell `functionName` correctly?
+
