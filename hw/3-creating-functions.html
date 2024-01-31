@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -251,10 +285,131 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming soon!</p>
+<blockquote class="blockquote">
+<p><strong>Due</strong>: Feb 07 by 11:59pm</p>
+<p><strong>Weight</strong>: This assignment is worth 4% of your final grade.</p>
+<p><strong>Purpose</strong>: The purposes of this assignment are:</p>
+<ul>
+<li>To practice creating your own functions in R from scratch.</li>
+<li>To practice writing code <em>using good style</em>.</li>
+<li>To practice problem solving (e.g.&nbsp;using Polya’s technique).</li>
+</ul>
+<p><strong>Assessment</strong>: Each question indicates the % of the assignment grade, summing to 100%. The credit for each question will be assigned as follows:</p>
+<ul>
+<li>0% for not attempting a response.</li>
+<li>50% for attempting the question but with <em>major</em> errors.</li>
+<li>75% for attempting the question but with <em>minor</em> errors.</li>
+<li>100% for correctly answering the question.</li>
+</ul>
+<p>The reflection portion is always worth 10% and graded for completion.</p>
+<p><strong>Rules</strong>:</p>
+<ul>
+<li>Problems marked <strong>SOLO</strong> may not be worked on with other classmates, though you may consult instructors for help.</li>
+<li>For problems marked <strong>COLLABORATIVE</strong>, you may work in groups of up to 3 students who are in this course this semester. You may not split up the work – everyone must work on every problem. And you may not simply copy any code but rather truly work together and submit your own solutions.</li>
+</ul>
+</blockquote>
+<section id="readings" class="level3">
+<h3 class="anchored" data-anchor-id="readings">Readings</h3>
+<p>The readings from the last week will serve as a helpful reference as you complete this assignment. You can review them here:</p>
+<blockquote class="blockquote">
+<div class="cell" data-layout-align="center">
+<a href="https://p4a.jhelvy.com/creating-functions.html" target="_blank"><b>Creating Functions</b></a>
+</div>
+</blockquote>
+<blockquote class="blockquote">
+<h3 id="using-the-autograder" class="anchored">Using the <a href="../autograder.html">autograder</a></h3>
+<ul>
+<li>You can check your solutions to problems 2 - 7 by logging into the <a href="../autograder.html">autograder</a> and uploading your <code>hw3.R</code> file.</li>
+<li><strong>The file must be named <code>hw3.R</code> or it won’t work.</strong></li>
+<li>Your user name is your netID, and your password is inside the <code>readme.txt</code> file in the Box folder I shared with you.</li>
+</ul>
+</blockquote>
+</section>
+<section id="staying-organized-solo-5" class="level3">
+<h3 class="anchored" data-anchor-id="staying-organized-solo-5">1) Staying organized [SOLO, 5%]</h3>
+<p>As always, we’re going to use an R project to keep everything in this assignment tidy. Download and use <a href="templates/hw3.zip">this template</a> for your assignment. Inside the “hw3” folder, open and edit the R script called “hw3.R” and fill out your name, Net ID, and the names of anyone you worked with on this assignment.</p>
+</section>
+<section id="integersquarerootn-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="integersquarerootn-solo-10">2) <code>integerSquareRoot(n)</code> [SOLO, 10%]</h3>
+<p>Given a non-negative integer <code>n</code>, return the integer value that is closest to its square root. For example, <code>integerSquareRoot(10)</code> returns <code>3</code>.</p>
+</section>
+<section id="fabricyardsinches-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="fabricyardsinches-solo-10">3) <code>fabricYards(inches)</code> [SOLO, 10%]</h3>
+<p>Fabric must be purchased in whole yards. Write a function that takes a non-negative number of inches of fabric desired, and returns the smallest number of whole yards of fabric that must be purchased. Thus, <code>fabricYards(1)</code> is <code>1</code> (you need a full yard if you buy one inch) and <code>fabricYards(36)</code> is also <code>1</code>, but <code>fabricYards(37)</code> is <code>2</code>. Hint: There are 36 inches in a yard!</p>
+</section>
+<section id="fabricexcessinches-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="fabricexcessinches-solo-10">4) <code>fabricExcess(inches)</code> [SOLO, 10%]</h3>
+<p>Write a function that takes a non-negative number of inches of fabric desired and returns the number of inches of excess fabric that must be purchased (as purchases must be in whole yards). Thus, since you need a whole yard when you buy 1 inch, <code>fabricExcess(1)</code> is <code>35</code>. Similarly, <code>fabricExcess(36)</code> is <code>0</code>, and <code>fabricExcess(37)</code> is <code>35</code>.</p>
+<p>Hint: there are (at least) two good ways to write this. One way involves a simple expression using one of the math operators we have learned. The other way uses <code>fabricYards(inches)</code> (which you just wrote!).</p>
+</section>
+<section id="isperfectcubex-solo-15" class="level3">
+<h3 class="anchored" data-anchor-id="isperfectcubex-solo-15">5) <code>isPerfectCube(x)</code> [SOLO, 15%]</h3>
+<p>Given an integer value <code>x</code>, returns <code>TRUE</code> if it is a perfect cube and <code>FALSE</code> otherwise. That is, return <code>TRUE</code> if there is another integer <code>y</code> such that <code>x = y^3</code>. Thus, <code>isPerfectCube(27)</code> returns <code>TRUE</code>, but <code>isPerfectCube(16)</code> returns <code>FALSE</code>.</p>
+</section>
+<section id="kthdigitx-k-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="kthdigitx-k-collaborative-15">6) <code>kthDigit(x, k)</code> [COLLABORATIVE, 15%]</h3>
+<p>Given two integers, <code>x</code> and <code>k</code>, return the kth digit of <code>x</code>, counting from the right. So:</p>
+<ul>
+<li><code>kthDigit(789, 1)</code> returns <code>9</code></li>
+<li><code>kthDigit(789, 2)</code> returns <code>8</code></li>
+<li><code>kthDigit(789, 3)</code> returns <code>7</code></li>
+<li><code>kthDigit(789, 4)</code> returns <code>0</code></li>
+</ul>
+<p>Negative numbers should work, too, so <code>kthDigit(-789, 1)</code> returns <code>9</code>.</p>
+</section>
+<section id="numberofpoolballsrows-collaborative-15" class="level3">
+<h3 class="anchored" data-anchor-id="numberofpoolballsrows-collaborative-15">7) <code>numberOfPoolBalls(rows)</code> [COLLABORATIVE, 15%]</h3>
+<p><img src="images/poolballs.jpg" class="img-fluid" width="150"></p>
+<p>Pool balls are arranged in rows where the first row contains 1 pool ball and each row contains 1 more pool ball than the previous row. Thus, for example, 3 rows contain 6 total pool balls (1+2+3). With this in mind, write the function <code>numberOfPoolBalls(rows)</code> that takes a non-negative integer value (the number of rows) and returns another integer value (the number of pool balls in that number of full rows). For example, <code>numberOfPoolBalls(3)</code> returns <code>6</code>. We will not limit our analysis to a “rack” of 15 balls; rather, our pool table can contain an unlimited number of rows. Hint: For this problem you should research <a href="https://en.wikipedia.org/wiki/Triangular_number">Triangular Numbers</a>.</p>
+</section>
+<section id="turtlesquares-collaborative-10" class="level3">
+<h3 class="anchored" data-anchor-id="turtlesquares-collaborative-10">8) <code>turtleSquare(s)</code> [COLLABORATIVE, 10%]</h3>
+<blockquote class="blockquote">
+<p>Note: Make sure your solutions for the remaining problem(s) are below the <code>ignore_rest</code> comment in your .R file (otherwise the autograder will run this code and it will be slow.</p>
+</blockquote>
+<p>Write the function <code>turtleSquare(s)</code> which uses the <strong>TurtleGraphics</strong> package to draw a square with side length <code>s &lt; 100</code> (because the turtle will “escape” the terrarium when <code>s &gt;= 100</code>). The square should be centered in the turtle’s terrarium, and your turtle should be placed in the center when done. <strong>Important</strong>: Do not put the <code>turtle_init()</code> command inside your function - the turtle should already be “initialized” inside the terrarium before calling your <code>turtleSquare(s)</code> function. For example, the code below produces a square with side length of 50:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TurtleGraphics)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">turtle_init</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">turtleSquare</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/turtle_square.png" class="img-fluid" width="456"></p>
+</section>
+<section id="read-and-reflect-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">9) Read and reflect [SOLO, 10%]</h3>
+<p>Read and reflect on the following readings to preview what we will be covering next:</p>
+<blockquote class="blockquote">
+<div class="cell" data-layout-align="center">
+<a href="https://p4a.jhelvy.com/conditionals.html" target="_blank"><b>Conditionals</b></a><br><a href="https://p4a.jhelvy.com/testing-debugging.html" target="_blank"><b>Testing &amp; Debugging</b></a>
+</div>
+</blockquote>
+<p>Afterwards, reflect on what you’ve learned while going through these readings and exercises. Is there anything that jumped out at you? Anything you found particularly interesting or confusing?</p>
+<p>In a comment (<code>#</code>) in your .R file, write at least a paragraph about your thoughts, and include at least one question. This can be on what you’ve learned and any questions or points of confusion you have about what we’ve covered thus far. This can be related to this assignment, next week’s readings, things going on in the world that remind you something from class, etc. If there’s anything that jumped out at you, write it down.</p>
+<p>Some thoughts you may want to try in your reflection:</p>
+<ul>
+<li>“I used to think ______, now I think ______ 🤔”</li>
+<li>Discuss some of the key insights or things you found interesting in the readings or recent class periods.</li>
+<li>Connect the course content to your own work or projects you’re working on.</li>
+</ul>
+</section>
+<section id="submit" class="level3">
+<h3 class="anchored" data-anchor-id="submit">Submit</h3>
+<p>Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.</p>
+<hr>
+</section>
+<section id="bonus-turtletriangles-solo-3" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-turtletriangles-solo-3"><strong>Bonus</strong>: <code>turtleTriangle(s)</code> [SOLO, 3%]</h3>
+<p>Write the function <code>turtleTriangle(s)</code> which uses the <strong>TurtleGraphics</strong> package to draw an equilateral triangle with side length <code>s &lt; 100</code>. The triangle should be centered in the turtle’s terrarium, and your turtle should be placed in the center when done. Just like with <code>turtleSquare(s)</code>, do not put the <code>turtle_init()</code> command inside your function - the turtle should already be “initialized” inside the terrarium before calling <code>turtleTriangle(s)</code>. Hint: Getting the triangle centered is the tricky part - you may want to read more about <a href="https://en.wikipedia.org/wiki/Equilateral_triangle">equilateral triangles</a> and <a href="https://en.wikipedia.org/wiki/Apothem">apothems</a>. The code below produces a triangle with side length of 50:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TurtleGraphics)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">turtle_init</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">turtleTriangle</span>(<span class="dv">50</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img src="images/turtle_triangle.png" class="img-fluid" width="456"></p>
 
 <p>:::</p>
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
