@@ -5,6 +5,12 @@ toc-title: FAQ
 toc-location: right
 ---
 
+## How do I make a zip file for my homework?
+
+[**Mac**](https://www.youtube.com/watch?v=62tw3wZvQxs&t=23s)
+
+[**Windows**](https://youtu.be/E5qBvtxmBC4?si=Rekeo5C4RHTQd87G&t=30)
+
 ## Where can I see my grades?
 
 [box.com](https://box.com/)
@@ -17,11 +23,18 @@ If you log into box.com using your GW email, you should be able to find this fol
 
 Since homeworks are due the night before class, I usually can't grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade **one week after submitting it**.
 
-## How do I make a zip file for my homework?
+## My R / RStudio is totally [FUBAR](https://en.wikipedia.org/wiki/List_of_military_slang_terms#FUBAR), what should I do? 
 
-[**Mac**](https://www.youtube.com/watch?v=62tw3wZvQxs&t=23s)
+If you want to get back up to speed quickly, you can open a cloud version of RStudio on the web at [https://posit.cloud/plans/free](https://posit.cloud/plans/free). This is by far the easiest and fastest thing to do. 
 
-[**Windows**](https://youtu.be/E5qBvtxmBC4?si=Rekeo5C4RHTQd87G&t=30)
+You can try to troubleshoot, but often the next easiest thing to do is just re-install R and RStudio. Be careful to save your work first!
+
+## RStudio won't let me save my file
+
+Most often times this occurs for one of two reasons:
+
+1. You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be "looking" at the correct folder where your .R file lives. As a result, it can't find it on your computer and can't save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file. 
+2. If you're on a windows computer, you may have opened RStudio from _inside the zip file_. As a result, you can't save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file. 
 
 ## I got this error message
 
