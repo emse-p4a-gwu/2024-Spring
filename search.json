@@ -376,7 +376,17 @@
     "href": "faq.html",
     "title": "Frequenly Asked Questions",
     "section": "",
-    "text": "box.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
+    "text": "Mac\nWindows",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
+    "href": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
+    "title": "Frequenly Asked Questions",
+    "section": "",
+    "text": "Mac\nWindows",
     "crumbs": [
       "FAQ"
     ]
@@ -385,8 +395,8 @@
     "objectID": "faq.html#where-can-i-see-my-grades",
     "href": "faq.html#where-can-i-see-my-grades",
     "title": "Frequenly Asked Questions",
-    "section": "",
-    "text": "box.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
+    "section": "Where can I see my grades?",
+    "text": "Where can I see my grades?\nbox.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
     "crumbs": [
       "FAQ"
     ]
@@ -402,11 +412,21 @@
     ]
   },
   {
-    "objectID": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
-    "href": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
+    "objectID": "faq.html#my-r-rstudio-is-totally-fubar-what-should-i-do",
+    "href": "faq.html#my-r-rstudio-is-totally-fubar-what-should-i-do",
     "title": "Frequenly Asked Questions",
-    "section": "How do I make a zip file for my homework?",
-    "text": "How do I make a zip file for my homework?\nMac\nWindows",
+    "section": "My R / RStudio is totally FUBAR, what should I do?",
+    "text": "My R / RStudio is totally FUBAR, what should I do?\nIf you want to get back up to speed quickly, you can open a cloud version of RStudio on the web at https://posit.cloud/plans/free. This is by far the easiest and fastest thing to do.\nYou can try to troubleshoot, but often the next easiest thing to do is just re-install R and RStudio. Be careful to save your work first!",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#rstudio-wont-let-me-save-my-file",
+    "href": "faq.html#rstudio-wont-let-me-save-my-file",
+    "title": "Frequenly Asked Questions",
+    "section": "RStudio won’t let me save my file",
+    "text": "RStudio won’t let me save my file\nMost often times this occurs for one of two reasons:\n\nYou may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.\nIf you’re on a windows computer, you may have opened RStudio from inside the zip file. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.",
     "crumbs": [
       "FAQ"
     ]

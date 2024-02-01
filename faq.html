@@ -242,9 +242,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">FAQ</h2>
    
   <ul>
-  <li><a href="#where-can-i-see-my-grades" id="toc-where-can-i-see-my-grades" class="nav-link active" data-scroll-target="#where-can-i-see-my-grades">Where can I see my grades?</a></li>
+  <li><a href="#how-do-i-make-a-zip-file-for-my-homework" id="toc-how-do-i-make-a-zip-file-for-my-homework" class="nav-link active" data-scroll-target="#how-do-i-make-a-zip-file-for-my-homework">How do I make a zip file for my homework?</a></li>
+  <li><a href="#where-can-i-see-my-grades" id="toc-where-can-i-see-my-grades" class="nav-link" data-scroll-target="#where-can-i-see-my-grades">Where can I see my grades?</a></li>
   <li><a href="#when-can-i-expect-to-see-a-grade-for-my-assignment" id="toc-when-can-i-expect-to-see-a-grade-for-my-assignment" class="nav-link" data-scroll-target="#when-can-i-expect-to-see-a-grade-for-my-assignment">When can I expect to see a grade for my assignment?</a></li>
-  <li><a href="#how-do-i-make-a-zip-file-for-my-homework" id="toc-how-do-i-make-a-zip-file-for-my-homework" class="nav-link" data-scroll-target="#how-do-i-make-a-zip-file-for-my-homework">How do I make a zip file for my homework?</a></li>
+  <li><a href="#my-r-rstudio-is-totally-fubar-what-should-i-do" id="toc-my-r-rstudio-is-totally-fubar-what-should-i-do" class="nav-link" data-scroll-target="#my-r-rstudio-is-totally-fubar-what-should-i-do">My R / RStudio is totally FUBAR, what should I do?</a></li>
+  <li><a href="#rstudio-wont-let-me-save-my-file" id="toc-rstudio-wont-let-me-save-my-file" class="nav-link" data-scroll-target="#rstudio-wont-let-me-save-my-file">RStudio won’t let me save my file</a></li>
   <li><a href="#i-got-this-error-message" id="toc-i-got-this-error-message" class="nav-link" data-scroll-target="#i-got-this-error-message">I got this error message</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/emse-p4a-gwu/2024-Spring/edit/main/faq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/emse-p4a-gwu/2024-Spring/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -271,6 +273,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="how-do-i-make-a-zip-file-for-my-homework" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-make-a-zip-file-for-my-homework">How do I make a zip file for my homework?</h2>
+<p><a href="https://www.youtube.com/watch?v=62tw3wZvQxs&amp;t=23s"><strong>Mac</strong></a></p>
+<p><a href="https://youtu.be/E5qBvtxmBC4?si=Rekeo5C4RHTQd87G&amp;t=30"><strong>Windows</strong></a></p>
+</section>
 <section id="where-can-i-see-my-grades" class="level2">
 <h2 class="anchored" data-anchor-id="where-can-i-see-my-grades">Where can I see my grades?</h2>
 <p><a href="https://box.com/">box.com</a></p>
@@ -281,10 +288,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="when-can-i-expect-to-see-a-grade-for-my-assignment">When can I expect to see a grade for my assignment?</h2>
 <p>Since homeworks are due the night before class, I usually can’t grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade <strong>one week after submitting it</strong>.</p>
 </section>
-<section id="how-do-i-make-a-zip-file-for-my-homework" class="level2">
-<h2 class="anchored" data-anchor-id="how-do-i-make-a-zip-file-for-my-homework">How do I make a zip file for my homework?</h2>
-<p><a href="https://www.youtube.com/watch?v=62tw3wZvQxs&amp;t=23s"><strong>Mac</strong></a></p>
-<p><a href="https://youtu.be/E5qBvtxmBC4?si=Rekeo5C4RHTQd87G&amp;t=30"><strong>Windows</strong></a></p>
+<section id="my-r-rstudio-is-totally-fubar-what-should-i-do" class="level2">
+<h2 class="anchored" data-anchor-id="my-r-rstudio-is-totally-fubar-what-should-i-do">My R / RStudio is totally <a href="https://en.wikipedia.org/wiki/List_of_military_slang_terms#FUBAR">FUBAR</a>, what should I do?</h2>
+<p>If you want to get back up to speed quickly, you can open a cloud version of RStudio on the web at <a href="https://posit.cloud/plans/free">https://posit.cloud/plans/free</a>. This is by far the easiest and fastest thing to do.</p>
+<p>You can try to troubleshoot, but often the next easiest thing to do is just re-install R and RStudio. Be careful to save your work first!</p>
+</section>
+<section id="rstudio-wont-let-me-save-my-file" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio-wont-let-me-save-my-file">RStudio won’t let me save my file</h2>
+<p>Most often times this occurs for one of two reasons:</p>
+<ol type="1">
+<li>You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
+<li>If you’re on a windows computer, you may have opened RStudio from <em>inside the zip file</em>. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
+</ol>
 </section>
 <section id="i-got-this-error-message" class="level2">
 <h2 class="anchored" data-anchor-id="i-got-this-error-message">I got this error message</h2>
