@@ -29,4 +29,3 @@ Since homeworks are due the night before class, I usually can't grade them all b
 
 - Did you load the package that contains `functionName`?
 - Did you spell `functionName` correctly?
-

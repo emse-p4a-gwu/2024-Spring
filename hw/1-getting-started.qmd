@@ -125,4 +125,4 @@ b) Write a statement with both _relational_ & _logical_ operators that compares 
 
 ### Submit
 
-Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.
+[Create a zip file](https://p4a.seas.gwu.edu/2024-Spring/faq.html#how-do-i-make-a-zip-file-for-my-homework) of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.

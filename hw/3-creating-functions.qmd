@@ -95,7 +95,7 @@ turtleSquare(50)
 
 ### Submit
 
-Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.
+{{< var hw_submit >}}
 
 ---
 

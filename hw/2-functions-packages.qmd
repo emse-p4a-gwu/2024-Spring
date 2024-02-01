@@ -149,4 +149,4 @@ d) Using what you've learned about how to manipulate your turtle, write **two di
 
 ### Submit
 
-Create a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.
+{{< var hw_submit >}}
