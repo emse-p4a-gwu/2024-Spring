@@ -160,6 +160,16 @@
     ]
   },
   {
+    "objectID": "syllabus.html#check-the-faq",
+    "href": "syllabus.html#check-the-faq",
+    "title": "Syllabus",
+    "section": "Check the FAQ",
+    "text": "Check the FAQ\nI’ve set up a FAQ page to address a lot of common questions. Check it out, you may find an answer there!",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
     "objectID": "syllabus.html#slack",
     "href": "syllabus.html#slack",
     "title": "Syllabus",
@@ -376,7 +386,7 @@
     "href": "faq.html",
     "title": "Frequenly Asked Questions",
     "section": "",
-    "text": "Mac\nWindows",
+    "text": "Mac\nWindows\n\n\n\nbox.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.\n\n\n\nSince homeworks are due the night before class, I usually can’t grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade one week after submitting it.\n\n\n\nSee the class late policy for details. That said, if you’ve completed an assignment but it’s now late, please do go ahead and submit it. Better to get some credit for it than none.\nIf you’re submitting late, please send your submission to Professor Helveston in slack - don’t submit on Blackboard. The Blackboard submission window will probably close anyway, and also Professor Helveston downloads all the submissions when they are due, so late submissions often get missed.",
     "crumbs": [
       "FAQ"
     ]
@@ -395,8 +405,8 @@
     "objectID": "faq.html#where-can-i-see-my-grades",
     "href": "faq.html#where-can-i-see-my-grades",
     "title": "Frequenly Asked Questions",
-    "section": "Where can I see my grades?",
-    "text": "Where can I see my grades?\nbox.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
+    "section": "",
+    "text": "box.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
     "crumbs": [
       "FAQ"
     ]
@@ -405,8 +415,18 @@
     "objectID": "faq.html#when-can-i-expect-to-see-a-grade-for-my-assignment",
     "href": "faq.html#when-can-i-expect-to-see-a-grade-for-my-assignment",
     "title": "Frequenly Asked Questions",
-    "section": "When can I expect to see a grade for my assignment?",
-    "text": "When can I expect to see a grade for my assignment?\nSince homeworks are due the night before class, I usually can’t grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade one week after submitting it.",
+    "section": "",
+    "text": "Since homeworks are due the night before class, I usually can’t grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade one week after submitting it.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#how-can-i-submit-my-homework-late",
+    "href": "faq.html#how-can-i-submit-my-homework-late",
+    "title": "Frequenly Asked Questions",
+    "section": "",
+    "text": "See the class late policy for details. That said, if you’ve completed an assignment but it’s now late, please do go ahead and submit it. Better to get some credit for it than none.\nIf you’re submitting late, please send your submission to Professor Helveston in slack - don’t submit on Blackboard. The Blackboard submission window will probably close anyway, and also Professor Helveston downloads all the submissions when they are due, so late submissions often get missed.",
     "crumbs": [
       "FAQ"
     ]
