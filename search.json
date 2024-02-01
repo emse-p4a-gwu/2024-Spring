@@ -452,6 +452,16 @@
     ]
   },
   {
+    "objectID": "faq.html#i-keep-seeing-a-sign-in-the-console",
+    "href": "faq.html#i-keep-seeing-a-sign-in-the-console",
+    "title": "Frequenly Asked Questions",
+    "section": "I keep seeing a + sign in the console…",
+    "text": "I keep seeing a + sign in the console…\nIf you start a command but don’t complete it, R will show a + sign because it’s waiting for you to finish it. Here’s an example:\n\n5 +\n\nIf you press enter, R will show a + sign, and each time you press enter you’ll get more + signs. This is because R wants you to “finish” the command (it expects another number).\nThe easiest way to get out of this is to press the “Escape” key. Do that, and you’ll get back to the &gt; R console.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
     "objectID": "faq.html#i-got-this-error-message",
     "href": "faq.html#i-got-this-error-message",
     "title": "Frequenly Asked Questions",

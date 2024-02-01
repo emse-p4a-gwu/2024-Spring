@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -251,6 +285,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#my-r-rstudio-is-totally-fubar-what-should-i-do" id="toc-my-r-rstudio-is-totally-fubar-what-should-i-do" class="nav-link" data-scroll-target="#my-r-rstudio-is-totally-fubar-what-should-i-do">My R / RStudio is totally FUBAR, what should I do?</a></li>
   <li><a href="#rstudio-wont-let-me-save-my-file" id="toc-rstudio-wont-let-me-save-my-file" class="nav-link" data-scroll-target="#rstudio-wont-let-me-save-my-file">RStudio won’t let me save my file</a></li>
+  <li><a href="#i-keep-seeing-a-sign-in-the-console" id="toc-i-keep-seeing-a-sign-in-the-console" class="nav-link" data-scroll-target="#i-keep-seeing-a-sign-in-the-console">I keep seeing a <code>+</code> sign in the console…</a></li>
   <li><a href="#i-got-this-error-message" id="toc-i-got-this-error-message" class="nav-link" data-scroll-target="#i-got-this-error-message">I got this error message</a></li>
   </ul></li>
   </ul>
@@ -315,6 +350,15 @@ ul.task-list li input[type="checkbox"] {
 <li>You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
 <li>If you’re on a windows computer, you may have opened RStudio from <em>inside the zip file</em>. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
 </ol>
+</section>
+<section id="i-keep-seeing-a-sign-in-the-console" class="level2">
+<h2 class="anchored" data-anchor-id="i-keep-seeing-a-sign-in-the-console">I keep seeing a <code>+</code> sign in the console…</h2>
+<p>If you start a command but don’t complete it, R will show a <code>+</code> sign because it’s waiting for you to finish it. Here’s an example:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you press enter, R will show a <code>+</code> sign, and each time you press enter you’ll get more <code>+</code> signs. This is because R wants you to “finish” the command (it expects another number).</p>
+<p>The easiest way to get out of this is to press the “Escape” key. Do that, and you’ll get back to the <code>&gt;</code> R console.</p>
 </section>
 <section id="i-got-this-error-message" class="level2">
 <h2 class="anchored" data-anchor-id="i-got-this-error-message">I got this error message</h2>
