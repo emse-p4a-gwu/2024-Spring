@@ -372,62 +372,113 @@
     "text": "Coming soon!\n\n:::"
   },
   {
-    "objectID": "class/9-data-wrangling.html",
-    "href": "class/9-data-wrangling.html",
-    "title": "Data Wrangling",
+    "objectID": "faq.html",
+    "href": "faq.html",
+    "title": "Frequenly Asked Questions",
     "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/7-strings.html",
-    "href": "class/7-strings.html",
-    "title": "Strings",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/5-iteration.html",
-    "href": "class/5-iteration.html",
-    "title": "Iteration",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/3-creating-functions.html",
-    "href": "class/3-creating-functions.html",
-    "title": "Creating Functions",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/14-final-review.html",
-    "href": "class/14-final-review.html",
-    "title": "Final Exam Review",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/12-webscraping.html",
-    "href": "class/12-webscraping.html",
-    "title": "Webscraping",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "class/10-data-visualization.html",
-    "href": "class/10-data-visualization.html",
-    "title": "Data Visualization",
-    "section": "",
-    "text": "Coming soon!\n\n:::"
-  },
-  {
-    "objectID": "autograder.html",
-    "href": "autograder.html",
-    "title": "EMSE 4571 / 6571",
-    "section": "",
-    "text": ":::",
+    "text": "box.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
     "crumbs": [
-      "Autograder"
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#where-can-i-see-my-grades",
+    "href": "faq.html#where-can-i-see-my-grades",
+    "title": "Frequenly Asked Questions",
+    "section": "",
+    "text": "box.com\nI do not use Blackboard for showing your grades, so please ignore anything you see there. Instead, I create a unique folder for each of you on box.com. The folder will be named netID-p4a. For example, my netID is jph, so my folder would be jph-p4a.\nIf you log into box.com using your GW email, you should be able to find this folder. All of your graded feedback will be in that folder. You will see a pdf of feedback for each assignment as well as two CSV files: one that displays your grade for each assignment, and another that shows your current total grade in the class.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#when-can-i-expect-to-see-a-grade-for-my-assignment",
+    "href": "faq.html#when-can-i-expect-to-see-a-grade-for-my-assignment",
+    "title": "Frequenly Asked Questions",
+    "section": "When can I expect to see a grade for my assignment?",
+    "text": "When can I expect to see a grade for my assignment?\nSince homeworks are due the night before class, I usually can’t grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade one week after submitting it.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
+    "href": "faq.html#how-do-i-make-a-zip-file-for-my-homework",
+    "title": "Frequenly Asked Questions",
+    "section": "How do I make a zip file for my homework?",
+    "text": "How do I make a zip file for my homework?\nMac\nWindows",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#i-got-this-error-message",
+    "href": "faq.html#i-got-this-error-message",
+    "title": "Frequenly Asked Questions",
+    "section": "I got this error message",
+    "text": "I got this error message\n\ncould not find function \"functionName\"\n\n\nDid you load the package that contains functionName?\nDid you spell functionName correctly?\n\n\n:::",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "class/8-data-frames.html",
+    "href": "class/8-data-frames.html",
+    "title": "Data Frames",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/6-vectors.html",
+    "href": "class/6-vectors.html",
+    "title": "Vectors",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/4-conditionals-testing.html",
+    "href": "class/4-conditionals-testing.html",
+    "title": "Conditionals & Testing",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/2-functions-packages.html",
+    "href": "class/2-functions-packages.html",
+    "title": "Functions & Packages",
+    "section": "",
+    "text": "KEYBOARD SHORTCUTS FOR SLIDES:\n\nUse ← and → to navigate through the slides.\nUse f to toggle full screen.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts.\n\n\n\n\nSLIDES\n View slides\n Download PDF\n\n\n\n\nCLASS PRACTICE\n Notes zip file\n\n\n\n\n\n\n\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "class/13-monte-carlo-methods.html",
+    "href": "class/13-monte-carlo-methods.html",
+    "title": "Monte Carlo Methods",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/11-programming-with-data.html",
+    "href": "class/11-programming-with-data.html",
+    "title": "Programming with Data",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/1-getting-started.html",
+    "href": "class/1-getting-started.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "KEYBOARD SHORTCUTS FOR SLIDES:\n\nUse ← and → to navigate through the slides.\nUse f to toggle full screen.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts.\n\n\n\n\nSLIDES\n View slides\n Download PDF\n\n\n\n\nCLASS PRACTICE\n Notes zip file\n\n\n\n\n\n\n\n\n\n\n\n\n:::"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This course provides a foundation in programming for analytics using the R programming language with a comparison to Python. Topics covered include fundamentals of programming (operators, data types, objects, functions, conditionals, loops, strings, testing, and debugging) as well as techniques for working with data sets in R and Python (file input/output, data structures, data wrangling, data visualization, external packages, and reproducible reporting). Emphasis will be on producing clear, robust, and reasonably efficient code using top-down design, informal analysis, and effective testing and debugging. Students will primarily work on individual programming assignments to develop skills in computational problem solving, writing code, and working with data. Students will be assessed through quizzes, homework assignments, and exams. Teaching will involve interactive lectures with plenty of time spent live coding and working on practice problems in class. This course assumes no prior programming experience and is an ideal preparation for higher level courses in data analytics.\nThis course was inspired by many other courses / resources that cover similar material. In addition to my own developed material, I have also modified material from other courses and workshops - a full list of sources can be found in the LICENSE page.\nThis course was originally created by Dr. John Paul Helveston at the George Washington University for the Spring 2020 semester.\n\n:::",
+    "crumbs": [
+      "Other",
+      "About"
     ]
   },
   {
@@ -442,62 +493,61 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "autograder.html",
+    "href": "autograder.html",
+    "title": "EMSE 4571 / 6571",
     "section": "",
-    "text": "This course provides a foundation in programming for analytics using the R programming language with a comparison to Python. Topics covered include fundamentals of programming (operators, data types, objects, functions, conditionals, loops, strings, testing, and debugging) as well as techniques for working with data sets in R and Python (file input/output, data structures, data wrangling, data visualization, external packages, and reproducible reporting). Emphasis will be on producing clear, robust, and reasonably efficient code using top-down design, informal analysis, and effective testing and debugging. Students will primarily work on individual programming assignments to develop skills in computational problem solving, writing code, and working with data. Students will be assessed through quizzes, homework assignments, and exams. Teaching will involve interactive lectures with plenty of time spent live coding and working on practice problems in class. This course assumes no prior programming experience and is an ideal preparation for higher level courses in data analytics.\nThis course was inspired by many other courses / resources that cover similar material. In addition to my own developed material, I have also modified material from other courses and workshops - a full list of sources can be found in the LICENSE page.\nThis course was originally created by Dr. John Paul Helveston at the George Washington University for the Spring 2020 semester.\n\n:::",
+    "text": ":::",
     "crumbs": [
-      "Other",
-      "About"
+      "Autograder"
     ]
   },
   {
-    "objectID": "class/1-getting-started.html",
-    "href": "class/1-getting-started.html",
-    "title": "Getting Started",
-    "section": "",
-    "text": "KEYBOARD SHORTCUTS FOR SLIDES:\n\nUse ← and → to navigate through the slides.\nUse f to toggle full screen.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts.\n\n\n\n\nSLIDES\n View slides\n Download PDF\n\n\n\n\nCLASS PRACTICE\n Notes zip file\n\n\n\n\n\n\n\n\n\n\n\n\n:::"
-  },
-  {
-    "objectID": "class/11-programming-with-data.html",
-    "href": "class/11-programming-with-data.html",
-    "title": "Programming with Data",
+    "objectID": "class/10-data-visualization.html",
+    "href": "class/10-data-visualization.html",
+    "title": "Data Visualization",
     "section": "",
     "text": "Coming soon!\n\n:::"
   },
   {
-    "objectID": "class/13-monte-carlo-methods.html",
-    "href": "class/13-monte-carlo-methods.html",
-    "title": "Monte Carlo Methods",
+    "objectID": "class/12-webscraping.html",
+    "href": "class/12-webscraping.html",
+    "title": "Webscraping",
     "section": "",
     "text": "Coming soon!\n\n:::"
   },
   {
-    "objectID": "class/2-functions-packages.html",
-    "href": "class/2-functions-packages.html",
-    "title": "Functions & Packages",
-    "section": "",
-    "text": "KEYBOARD SHORTCUTS FOR SLIDES:\n\nUse ← and → to navigate through the slides.\nUse f to toggle full screen.\nUse o to view an overview of all slides.\nUse h to see a list of other shortcuts.\n\n\n\n\nSLIDES\n View slides\n Download PDF\n\n\n\n\nCLASS PRACTICE\n Notes zip file\n\n\n\n\n\n\n\n\n\n\n\n\n:::"
-  },
-  {
-    "objectID": "class/4-conditionals-testing.html",
-    "href": "class/4-conditionals-testing.html",
-    "title": "Conditionals & Testing",
+    "objectID": "class/14-final-review.html",
+    "href": "class/14-final-review.html",
+    "title": "Final Exam Review",
     "section": "",
     "text": "Coming soon!\n\n:::"
   },
   {
-    "objectID": "class/6-vectors.html",
-    "href": "class/6-vectors.html",
-    "title": "Vectors",
+    "objectID": "class/3-creating-functions.html",
+    "href": "class/3-creating-functions.html",
+    "title": "Creating Functions",
     "section": "",
     "text": "Coming soon!\n\n:::"
   },
   {
-    "objectID": "class/8-data-frames.html",
-    "href": "class/8-data-frames.html",
-    "title": "Data Frames",
+    "objectID": "class/5-iteration.html",
+    "href": "class/5-iteration.html",
+    "title": "Iteration",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/7-strings.html",
+    "href": "class/7-strings.html",
+    "title": "Strings",
+    "section": "",
+    "text": "Coming soon!\n\n:::"
+  },
+  {
+    "objectID": "class/9-data-wrangling.html",
+    "href": "class/9-data-wrangling.html",
+    "title": "Data Wrangling",
     "section": "",
     "text": "Coming soon!\n\n:::"
   },
