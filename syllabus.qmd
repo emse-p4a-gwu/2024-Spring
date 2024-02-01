@@ -218,6 +218,10 @@ Rather than round, I grade generously throughout the semester. For example, if y
 
 This class can be challenging - **do not suffer in silence!** We have lots of ways to get help.
 
+## Check the [FAQ](faq.qmd)
+
+I've set up a FAQ page to address a lot of common questions. Check it out, you may find an answer there!
+
 ## Slack
 
 All course communication will be managed through [Slack]({{< var slack >}}){target="_blank"}. A link to sign up for the course slack page can be found on the one (and only) announcement on Blackboard.

@@ -5,6 +5,8 @@ toc-title: FAQ
 toc-location: right
 ---
 
+# CLASS STUFF
+
 ## How do I make a zip file for my homework?
 
 [**Mac**](https://www.youtube.com/watch?v=62tw3wZvQxs&t=23s)
@@ -22,6 +24,14 @@ If you log into box.com using your GW email, you should be able to find this fol
 ## When can I expect to see a grade for my assignment?
 
 Since homeworks are due the night before class, I usually can't grade them all by the start of class. Some weeks it can take me up to a whole week to grade something, so at most you can expect to see a grade **one week after submitting it**.
+
+## How can I submit my homework late?
+
+See the class [late policy](/syllabus.html#late-policy) for details. That said, if you've completed an assignment but it's now late, please do go ahead and submit it. Better to get some credit for it than none.
+
+If you're submitting late, please **send your submission to Professor Helveston in slack - don't submit on Blackboard**. The Blackboard submission window will probably close anyway, and also Professor Helveston downloads all the submissions when they are due, so late submissions often get missed.
+
+# R / RSTUDIO STUFF
 
 ## My R / RStudio is totally [FUBAR](https://en.wikipedia.org/wiki/List_of_military_slang_terms#FUBAR), what should I do? 
 
