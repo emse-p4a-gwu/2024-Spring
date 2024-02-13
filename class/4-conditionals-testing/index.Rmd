@@ -946,6 +946,7 @@ print(x, digits = 20)
 .rightcol[.code80[
 
 Define a function that checks if two values are _almost_ the same:
+
 ```{r}
 almostEqual <- function(n1, n2, threshold = 0.00001) {
     return(abs(n1 - n2) <= threshold)
