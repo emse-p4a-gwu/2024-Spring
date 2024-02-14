@@ -634,7 +634,56 @@
     "href": "hw/5-iteration.html",
     "title": "Homework 5 - Iteration",
     "section": "",
-    "text": "Coming soon!\n\n:::"
+    "text": "Due: Feb 21 by 11:59pm\nWeight: This assignment is worth 4% of your final grade.\nPurpose: The purposes of this assignment are:\n\nTo practice using for and while loops in R.\nTo practice computational problem solving with loops.\n\nAssessment: Each question indicates the % of the assignment grade, summing to 100%. The credit for each question will be assigned as follows:\n\n0% for not attempting a response.\n50% for attempting the question but with major errors.\n75% for attempting the question but with minor errors.\n100% for correctly answering the question.\n\nThe reflection portion is always worth 10% and graded for completion.\nRules:\n\nProblems marked SOLO may not be worked on with other classmates, though you may consult instructors for help.\nFor problems marked COLLABORATIVE, you may work in groups of up to 3 students who are in this course this semester. You may not split up the work – everyone must work on every problem. And you may not simply copy any code but rather truly work together and submit your own solutions."
+  },
+  {
+    "objectID": "hw/5-iteration.html#happy-numbers-collaborative",
+    "href": "hw/5-iteration.html#happy-numbers-collaborative",
+    "title": "Homework 5 - Iteration",
+    "section": "Happy Numbers [COLLABORATIVE]",
+    "text": "Happy Numbers [COLLABORATIVE]\nBackground: Read the first paragraph from the Wikipedia page on happy numbers. After some thought, we see that no matter what number we start with, when we keep replacing the number by the sum of the squares of its digits, we’ll always either arrive at 4 (unhappy) or at 1 (happy). With that in mind, we want to write the function nthHappyNumber(n). However, to write that function, we’ll first need to write isHappyNumber(n), which determines whether a number is “happy” or not. And to right that function, we’ll first need to write sumOfSquaresOfDigits(n). And that’s top-down design! Here we go…"
+  },
+  {
+    "objectID": "hw/5-iteration.html#sumofsquaresofdigitsn-10",
+    "href": "hw/5-iteration.html#sumofsquaresofdigitsn-10",
+    "title": "Homework 5 - Iteration",
+    "section": "4) sumOfSquaresOfDigits(n) [10%]",
+    "text": "4) sumOfSquaresOfDigits(n) [10%]\nWrite the function sumOfSquaresOfDigits(n) which takes a non-negative integer, n, and returns the sum of the squares of its digits (assume that n will always be a positive integer, so no need to check for bad inputs)."
+  },
+  {
+    "objectID": "hw/5-iteration.html#ishappynumbern-10",
+    "href": "hw/5-iteration.html#ishappynumbern-10",
+    "title": "Homework 5 - Iteration",
+    "section": "5) isHappyNumber(n) [10%]",
+    "text": "5) isHappyNumber(n) [10%]\nWrite the function isHappyNumber(n) which takes a possibly-negative integer and returns TRUE if it is happy and FALSE otherwise. Note that all numbers less than 1 are not happy."
+  },
+  {
+    "objectID": "hw/5-iteration.html#nthhappynumbern-15",
+    "href": "hw/5-iteration.html#nthhappynumbern-15",
+    "title": "Homework 5 - Iteration",
+    "section": "6) nthHappyNumber(n) [15%]",
+    "text": "6) nthHappyNumber(n) [15%]\nWrite the function nthHappyNumber(n) which takes a non-negative integer, n, and returns the nth happy number, where nthHappyNumber(1) returns the first happy number (1)."
+  },
+  {
+    "objectID": "hw/5-iteration.html#turtle-loops-collaborative",
+    "href": "hw/5-iteration.html#turtle-loops-collaborative",
+    "title": "Homework 5 - Iteration",
+    "section": "Turtle loops! [COLLABORATIVE]",
+    "text": "Turtle loops! [COLLABORATIVE]\n(Note: Please put your solutions to these below the # ignore_rest comment so that the autograder doesn’t test these functions)"
+  },
+  {
+    "objectID": "hw/5-iteration.html#turtlesquares-redux-10",
+    "href": "hw/5-iteration.html#turtlesquares-redux-10",
+    "title": "Homework 5 - Iteration",
+    "section": "7) turtleSquare(s) redux [10%]",
+    "text": "7) turtleSquare(s) redux [10%]\nRe-write the turtleSquare(s) function from HW3, but this time you must use a for loop to draw the sides of the square. The following code should produce a square with a side length of 50:\n\nlibrary(TurtleGraphics)\n\nturtle_init()\nturtle_do({\n    turtleSquare(50)\n})"
+  },
+  {
+    "objectID": "hw/5-iteration.html#concentricturtlesquaresspacing-5-15",
+    "href": "hw/5-iteration.html#concentricturtlesquaresspacing-5-15",
+    "title": "Homework 5 - Iteration",
+    "section": "8) concentricTurtleSquares(spacing = 5) [15%]",
+    "text": "8) concentricTurtleSquares(spacing = 5) [15%]\nWrite the function concentricTurtleSquares(spacing) that uses the TurtleGraphics package to draw concentric squares from the center of the terrarium and outward. The spacing argument determines the spacing between each square, and the default value should be spacing = 5. Also, spacing &gt;= 1, and your function must not allow the turtle to escape the terrarium. Hint: you may want to use turtleSquare(s) as a helper function. The following code should produce concentric squares with a spacing of 5:\n\nlibrary(TurtleGraphics)\n\nturtle_init()\nturtle_do({\n    concentricTurtleSquares(5)\n})\n\n\n\n\n\n9) Read and reflect [SOLO, 10%]\nRead and reflect on the following readings to preview what we will be covering next:\n\n\nVectors\n\n\nAfterwards, reflect on what you’ve learned while going through these readings and exercises. Is there anything that jumped out at you? Anything you found particularly interesting or confusing?\nIn a comment (#) in your .R file, write at least a paragraph about your thoughts, and include at least one question. This can be on what you’ve learned and any questions or points of confusion you have about what we’ve covered thus far. This can be related to this assignment, next week’s readings, things going on in the world that remind you something from class, etc. If there’s anything that jumped out at you, write it down.\nSome thoughts you may want to try in your reflection:\n\n“I used to think ______, now I think ______ 🤔”\nDiscuss some of the key insights or things you found interesting in the readings or recent class periods.\nConnect the course content to your own work or projects you’re working on.\n\n\n\nSubmit\nCreate a zip file of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.\n\n\n\nBonus 1) turtleSquareRotated(s, degrees) [SOLO, 3%]\nWrite the function turtleSquareRotated(s, degrees) that uses the TurtleGraphics package to draw a square with side length s &lt; 100 and rotated by degrees &lt;= 180 counterclockwise from the horizontal plane. The rotated square should be centered in the turtle’s terrarium. Hint: you’re going to need to use the cosine (cos()) and sine (sin()) functions; in R, these functions take angles in radians (not degrees), so remember to convert your angles (180 degrees = \\(\\pi\\)). The following code should produce a square with a side length of 30 and rotated by 30 degrees:\n\nlibrary(TurtleGraphics)\nturtle_init()\nturtle_do({\n    turtleSquareRotated(30, 30)\n})\n\n\n\n\n\n\nBonus 2) turtleSquareStar(s, degreeSpacing = 20) [SOLO, 3%]\nWrite the function turtleSquareStar(s, degreeSpacing) that uses the turtleSquareRotated(s, degrees) as a helper function to draw a sequence of overlapping rotated squares with side length s &lt; 70 to form a star. The degreeSpacing argument determines the spacing in degrees between each rotated square, and the default value should be degreeSpacing = 20. Also, 1 &lt;= degreeSpacing &lt;= 60, and your function must not allow the turtle to escape the terrarium. The following code should produce the star of rotated squares with a side length of 50 and 20 degree spacings between each square:\n\nlibrary(TurtleGraphics)\nturtle_init()\nturtle_do({\n    turtleSquareStar(50, 20)\n})\n\n\n\n\n\n:::"
   },
   {
     "objectID": "hw/7-strings.html",
