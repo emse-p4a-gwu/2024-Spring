@@ -26,43 +26,6 @@ output:
 
 ---
 
-class: inverse
-
-# Quiz 4
-
-```{r, echo=FALSE}
-countdown(
-  minutes      = 10,
-  warn_when    = 30,
-  update_every = 1,
-  top          = 0,
-  right        = 0,
-  font_size    = '3em'
-)
-```
-
-.leftcol[
-
-## Write your name on the quiz!
-
-## Rules:
-
-- Work alone; no outside help of any kind is allowed.
-- No calculators, no notes, no books, no computers, no phones.
-
-]
-
-.rightcol[
-
-<br>
-<center>
-<img src="https://github.com/emse-p4a-gwu/2022-Spring/raw/main/images/quiz_doge.png" width="400">
-</center>
-
-]
-
----
-
 ```{r child="topics/0.Rmd"}
 ```
 
