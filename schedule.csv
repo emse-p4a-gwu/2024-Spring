@@ -8,8 +8,8 @@ operators-data-types",
 Testing & Debugging","conditionals
 testing-debugging",
 5,2024-02-15,,,5,iteration,Iteration,Ins and outs of loops,5,iteration,Iteration,2024-02-21,Iteration,iteration,
-6,2024-02-22,4,Weeks 4 - 5,6,vectors,Vectors,Creating and slicing collections of values,6,vectors,Vectors,2024-02-28,Vectors,vectors,
-7,2024-02-29,,,7,strings,Strings,All things between quotes,7,strings,Strings,2024-03-06,Strings,strings,
+6,2024-02-22,,,6,vectors,Vectors,Creating and slicing collections of values,6,vectors,Vectors,2024-02-28,Vectors,vectors,
+7,2024-02-29,4,Weeks 5 - 6,7,strings,Strings,All things between quotes,7,strings,Strings,2024-03-06,Strings,strings,
 9,2024-03-07,,,,,Midterm,Don't panic!,,,,,,,
 8,2024-03-14,,,,,Spring Break,No class,,,,,,,
 10,2024-03-21,,,8,data-frames,Data Frames,Rows and columns of data,8,data-frames,Data Frames,2024-03-27,"Data Analysis
@@ -17,8 +17,8 @@ Data Frames","data-analysis
 data-frames",
 11,2024-03-28,5,Week 10,9,data-wrangling,Data Wrangling,Modifying data frames,9,data-wrangling,Data Wrangling,2024-04-03,Data Wrangling,data-wrangling,
 12,2024-04-04,,,10,data-visualization,Data Visualization,Visualizing your data,10,data-visualization,Data Visualization,2024-04-10,Data Visualization,data-visualization,
-13,2024-04-11,6,Weeks 11 - 12,11,programming-with-data,Programming with Data,Iterating through data frames and writing functions to summarize data,11,programming-with-data,Programming with Data,2024-04-17,Programming with Data,,"<a href=https://r4ds.hadley.nz/functions.html#data-frame-functions target=""_blank""><b>Sections 26.3 & 26.4 in R4DS</b></a><br><a href=https://www.rebeccabarter.com/blog/2019-08-19_purrr target=""_blank""><b>Post on iteration with {purrr}</b></a>"
-14,2024-04-18,,,12,webscraping,Webscraping,Collecting data embedded in web pages,12,webscraping,Webscraping,2024-04-24,Webscraping,,"<a href=https://r4ds.hadley.nz/webscraping.html target=""_blank""><b>Chapter 25 in R4DS</b></a><br><a href=https://statisticsglobe.com/api-in-r target=""_blank""><b>Post on APIs in R</b></a>"
+13,2024-04-11,6,Weeks 11 - 12,11,programming-with-data,Programming with Data,Iterating through data frames and writing functions to summarize data,11,programming-with-data,Programming with Data,2024-04-17,Programming with Data,,<a href=https://r4ds.hadley.nz/functions.html#data-frame-functions target="_blank"><b>Sections 26.3 & 26.4 in R4DS</b></a><br><a href=https://www.rebeccabarter.com/blog/2019-08-19_purrr target="_blank"><b>Post on iteration with {purrr}</b></a>
+14,2024-04-18,,,12,webscraping,Webscraping,Collecting data embedded in web pages,12,webscraping,Webscraping,2024-04-24,Webscraping,,<a href=https://r4ds.hadley.nz/webscraping.html target="_blank"><b>Chapter 25 in R4DS</b></a><br><a href=https://statisticsglobe.com/api-in-r target="_blank"><b>Post on APIs in R</b></a>
 15,2024-04-25,7,Week 13,13,monte-carlo-methods,Monte Carlo Methods,Using simulation to solve problems,13,monte-carlo-methods,Monte Carlo Methods,2024-05-01,Monte Carlo Methods,monte-carlo-methods,
 16,2024-05-02,,,14,final-review,Final Exam Review,Overview of entire course,,,,,,,
 17,2024-05-09,,,,,Final Exam,3-5pm in Tompkins 201,,,,,,,
