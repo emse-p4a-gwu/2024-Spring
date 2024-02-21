@@ -121,7 +121,9 @@ turtle_do({
 
 ### Bonus 1) `turtleSquareRotated(s, degrees)` [SOLO, 3%]
 
-Write the function `turtleSquareRotated(s, degrees)` that uses the `TurtleGraphics` package to draw a square with side length `s < 100` and rotated by `degrees <= 180` counterclockwise from the horizontal plane. The rotated square should be centered in the turtle's terrarium. Hint: you're going to need to use the cosine (`cos()`) and sine (`sin()`) functions; in R, these functions take angles in **radians** (not degrees), so remember to convert your angles (180 degrees = $\pi$). The following code should produce a square with a side length of 30 and rotated by 30 degrees:
+Write the function `turtleSquareRotated(s, degrees)` that uses the `TurtleGraphics` package to draw a square with side length `s < 100` and rotated by `degrees <= 180` counterclockwise from the horizontal plane. The rotated square should be centered in the turtle's terrarium. **Hint**: There are multiple ways to solve this, one of which involves using the cosine (`cos()`) and sine (`sin()`) functions. In R, these functions take angles in **radians** (not degrees), so remember to convert your angles (180 degrees = $\pi$).
+
+The following code should produce a square with a side length of 30 and rotated by 30 degrees:
 
 ```{r, eval=FALSE}
 library(TurtleGraphics)
