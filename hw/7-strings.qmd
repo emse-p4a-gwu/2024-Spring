@@ -69,7 +69,7 @@ Write a function that takes a single string, `sentence`, and returns a vector of
 
 ### 7) `sameChars(s1, s2)` [COLLABORATIVE, 15%]
 
-Write the function `sameChars(s1, s2)` that takes two strings and returns `TRUE` if the two strings are composed of the same characters (though perhaps in different numbers and in different orders); that is, if every character that is in the first string is in the second (and vice versa), and `FALSE` otherwise. This test is case-sensitive, so `"ABC"` and `"abc"` do not contain the same characters. The function returns `FALSE` if either parameter is not a string, but returns `TRUE` if both strings are empty.
+Write the function `sameChars(s1, s2)` that takes two strings and returns `TRUE` if the two strings are composed of the same characters (though perhaps in different orders); that is, if every character that is in the first string is in the second (and vice versa), return `TRUE`, otherwise return `FALSE`. Assume that `s1` and `s2` are both strings. This test is case-sensitive, so `"ABC"` and `"abc"` do not contain the same characters. The function returns `FALSE` if either parameter is not a string, but returns `TRUE` if both strings are empty.
 
 ### 8) Read and reflect [SOLO, 10%]
 
