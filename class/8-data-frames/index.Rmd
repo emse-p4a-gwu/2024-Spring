@@ -39,6 +39,14 @@ wildlife_impacts <- read_csv(pathToData)
 
 ---
 
+class: center, middle
+
+# HW Change
+
+## HWs are now due by midnight on **Tuesday night**<br>(not Wednesday night)
+
+---
+
 # The Challenger disaster
 
 On January 28, 1986 the space shuttle Challenger exploded
