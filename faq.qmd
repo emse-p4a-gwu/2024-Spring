@@ -41,14 +41,16 @@ You can try to troubleshoot, but often the next easiest thing to do is just re-i
 
 ## RStudio won't let me save my file
 
-See solution to the question below.
+Most often times this occurs for one of two reasons:
+
+1. You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be "looking" at the correct folder where your .R file lives. As a result, it can't find it on your computer and can't save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.
+2. If you're on a windows computer, you may have opened RStudio from _inside the zip file_. As a result, you can't save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.
 
 ## I'm trying to read / write some data using `here()` and it says the path doesn't exist.
 
-Most often times this occurs for one of two reasons:
+Have you double-checked that the file name you defined is the same as the data file name? For example, if there is a folder called "data" and inside it a data file called "some_data.csv", then your path should be `here('data', 'some_data.csv')`.
 
-1. You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be "looking" at the correct folder where your .R file lives. As a result, it can't find it on your computer and can't save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file. 
-2. If you're on a windows computer, you may have opened RStudio from _inside the zip file_. As a result, you can't save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file. 
+If the file names look correct, then see the two issues in the [above question](#rstudio-wont-let-me-save-my-file)
 
 ## I keep seeing a `+` sign in the console...
 
