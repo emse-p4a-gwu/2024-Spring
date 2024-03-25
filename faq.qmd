@@ -41,6 +41,10 @@ You can try to troubleshoot, but often the next easiest thing to do is just re-i
 
 ## RStudio won't let me save my file
 
+See solution to the question below.
+
+## I'm trying to read / write some data using `here()` and it says the path doesn't exist.
+
 Most often times this occurs for one of two reasons:
 
 1. You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be "looking" at the correct folder where your .R file lives. As a result, it can't find it on your computer and can't save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file. 
