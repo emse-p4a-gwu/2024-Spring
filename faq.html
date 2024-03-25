@@ -346,15 +346,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="rstudio-wont-let-me-save-my-file" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-wont-let-me-save-my-file">RStudio won’t let me save my file</h2>
-<p>See solution to the question below.</p>
-</section>
-<section id="im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist." class="level2">
-<h2 class="anchored" data-anchor-id="im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist.">I’m trying to read / write some data using <code>here()</code> and it says the path doesn’t exist.</h2>
 <p>Most often times this occurs for one of two reasons:</p>
 <ol type="1">
 <li>You may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
 <li>If you’re on a windows computer, you may have opened RStudio from <em>inside the zip file</em>. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.</li>
 </ol>
+</section>
+<section id="im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist." class="level2">
+<h2 class="anchored" data-anchor-id="im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist.">I’m trying to read / write some data using <code>here()</code> and it says the path doesn’t exist.</h2>
+<p>Have you double-checked that the file name you defined is the same as the data file name? For example, if there is a folder called “data” and inside it a data file called “some_data.csv”, then your path should be <code>here('data', 'some_data.csv')</code>.</p>
+<p>If the file names look correct, then see the two issues in the <a href="#rstudio-wont-let-me-save-my-file">above question</a></p>
 </section>
 <section id="i-keep-seeing-a-sign-in-the-console" class="level2">
 <h2 class="anchored" data-anchor-id="i-keep-seeing-a-sign-in-the-console">I keep seeing a <code>+</code> sign in the console…</h2>
