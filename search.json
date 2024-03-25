@@ -446,7 +446,17 @@
     "href": "faq.html#rstudio-wont-let-me-save-my-file",
     "title": "Frequenly Asked Questions",
     "section": "RStudio won’t let me save my file",
-    "text": "RStudio won’t let me save my file\nMost often times this occurs for one of two reasons:\n\nYou may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.\nIf you’re on a windows computer, you may have opened RStudio from inside the zip file. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.",
+    "text": "RStudio won’t let me save my file\nSee solution to the question below.",
+    "crumbs": [
+      "FAQ"
+    ]
+  },
+  {
+    "objectID": "faq.html#im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist.",
+    "href": "faq.html#im-trying-to-read-write-some-data-using-here-and-it-says-the-path-doesnt-exist.",
+    "title": "Frequenly Asked Questions",
+    "section": "I’m trying to read / write some data using here() and it says the path doesn’t exist.",
+    "text": "I’m trying to read / write some data using here() and it says the path doesn’t exist.\nMost often times this occurs for one of two reasons:\n\nYou may have opened the .R file instead of the .RProj file, in which case RStudio opens, but it may not be “looking” at the correct folder where your .R file lives. As a result, it can’t find it on your computer and can’t save it. In this case, copy all of the text in your .R file, then re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.\nIf you’re on a windows computer, you may have opened RStudio from inside the zip file. As a result, you can’t save any files because everything is still zipped up. You have to go back and extract the files from the zip file before you can save anything. In this case, copy all of the text in your .R file, then quit RStudio, go unzip the folder, re-open RStudio by double clicking on the .RProj file, then open the .R file from inside RStudio and paste your code into the .R file.",
     "crumbs": [
       "FAQ"
     ]
