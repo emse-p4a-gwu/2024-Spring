@@ -86,6 +86,48 @@ countdown(
 
 ---
 
+# .center[How to fail with ChatGPT]
+ 
+--
+
+1. Copy-paste the code and never run it.
+
+```{r}
+#| eval: false
+
+(df$Population / df$State.Population) * 100
+```
+
+--
+
+2. Do things I've explicitly told you not to do.
+
+```{r}
+#| eval: false
+
+df <- read.csv("data/prisoners2019.csv") # Bad
+```
+ 
+--
+
+```{r}
+#| eval: false
+
+df <- read_csv(here("data", "prisoners2019.csv")) # Good
+```
+
+--
+
+3. Use functions we've never covered.
+
+```{r}
+#| eval: false
+
+total_prison_population <- aggregate(Population ~ State, df, sum)
+```
+
+---
+
 ```{r child="topics/0.Rmd"}
 ```
 
