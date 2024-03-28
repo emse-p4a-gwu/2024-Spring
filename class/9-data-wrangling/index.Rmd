@@ -194,6 +194,16 @@ class: center
 
 ---
 
+class: center, middle 
+
+# That's a lot to remember!
+
+--
+
+## Use [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+
+---
+
 # This week's British Band: **The Spice Girls**
 
 ```{r}
