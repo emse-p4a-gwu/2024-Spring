@@ -34,7 +34,6 @@ Imports:
     remotes,
     repurrrsive,
     reticulate,
-    rmarkdown,
     roxygen2,
     tidyverse,
     TurtleGraphics,
