@@ -4,4 +4,5 @@ params:
   class: "11-programming-with-data"
 ---
 
-Coming soon!
+```{r child = here::here("fragments", "class.qmd")}
+```

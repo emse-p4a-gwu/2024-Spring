@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -258,9 +292,164 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Coming soon!</p>
+<blockquote class="blockquote">
+<p><strong>Due</strong>: Apr 16 by 11:59pm</p>
+<p><strong>Weight</strong>: This assignment is worth 4% of your final grade.</p>
+<p><strong>Purpose</strong>: The purposes of this assignment are:</p>
+<ul>
+<li>Be able to compose functions using the ‘tidy evaluation’ syntax to work with data.</li>
+<li>Be able to parse through lists using <code>purrr::map()</code> functions.</li>
+</ul>
+<p><strong>Assessment</strong>: Each question indicates the % of the assignment grade, summing to 100%. The credit for each question will be assigned as follows:</p>
+<ul>
+<li>0% for not attempting a response.</li>
+<li>50% for attempting the question but with <em>major</em> errors.</li>
+<li>75% for attempting the question but with <em>minor</em> errors.</li>
+<li>100% for correctly answering the question.</li>
+</ul>
+<p>The reflection portion is always worth 10% and graded for completion.</p>
+<p><strong>Rules</strong>:</p>
+<ul>
+<li>Problems marked <strong>SOLO</strong> may not be worked on with other classmates, though you may consult instructors for help.</li>
+<li>For problems marked <strong>COLLABORATIVE</strong>, you may work in groups of up to 3 students who are in this course this semester. You may not split up the work – everyone must work on every problem. And you may not simply copy any code but rather truly work together and submit your own solutions.</li>
+</ul>
+</blockquote>
+<section id="readings" class="level3">
+<h3 class="anchored" data-anchor-id="readings">Readings</h3>
+<p>The readings from the last week will serve as a helpful reference as you complete this assignment. You can review them here:</p>
+<blockquote class="blockquote">
+<ul>
+<li>Sections 26.3 (Data Frame Functions) &amp; 26.4 (Plot Functions) in Hadley Wickham’s book R4DS: <a href="https://r4ds.hadley.nz/functions.html#data-frame-functions">https://r4ds.hadley.nz/functions.html#data-frame-functions</a></li>
+<li>This blog post on iteration with the {purrr} package: <a href="https://www.rebeccabarter.com/blog/2019-08-19_purrr">https://www.rebeccabarter.com/blog/2019-08-19_purrr</a></li>
+</ul>
+</blockquote>
+</section>
+<section id="using-ai-tools" class="level3">
+<h3 class="anchored" data-anchor-id="using-ai-tools"><strong>Using AI tools</strong></h3>
+<blockquote class="blockquote">
+<p>On this assignment, you are encouraged to use ChatGPT and other AI tools (e.g.&nbsp;Github Copilot). But don’t just blindly copy-paste code. The code provided by these tools is not perfect, and you will likely need to modify it to get the correct solution. If you do use an AI tools, you must include the prompt(s) you used (using a comment with <code>#</code>) to recieve full credit. If you had to change anything to your prompt to get better results, write that down too in your code with a comment. Learn to use tools like ChatGPT as a learning assistant - a tool to help you accomplish the task - rather than just a solutions manual. One version of using it makes you a better and more efficient coder, the other robs you of that.</p>
+</blockquote>
+</section>
+<section id="staying-organized-solo-5" class="level3">
+<h3 class="anchored" data-anchor-id="staying-organized-solo-5">1) Staying organized [SOLO, 5%]</h3>
+<p>Download and use <a href="templates/hw11.zip">this template</a> for your assignment. Inside the “hw11” folder, open and edit the R script called <code>hw11.R</code> and fill out your name, GW netID, and the names of anyone you worked with on this assignment.</p>
+</section>
+<section id="data-frame-functions" class="level2">
+<h2 class="anchored" data-anchor-id="data-frame-functions">Data Frame Functions</h2>
+<blockquote class="blockquote">
+<p>For questions 2 - 5, after writing your function, demonstrate it using a data frame of your choice from the <code>dslabs</code> package. For example, for question 2, you could use <code>var_summary(dslabs::movielens, rating)</code> (so, obviously, you should use a different example).</p>
+</blockquote>
+<section id="var_summarydf-var-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="var_summarydf-var-solo-10">2) <code>var_summary(df, var)</code> [SOLO, 10%]</h3>
+<p>Write the function <code>var_summary(df, var)</code> that takes a data frame (<code>df</code>) and a variable (<code>var</code>) as inputs, and returns the minimum, maximum, mean, and median value of that variable. The function should remove any <code>NA</code> values in <code>var</code> when computing these summary statistics. The object returned should be a single data frame / tibble (not a vector).</p>
+</section>
+<section id="group_summarydf-var-group_var-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="group_summarydf-var-group_var-solo-10">3) <code>group_summary(df, var, group_var)</code> [SOLO, 10%]</h3>
+<p>Write the function <code>group_summary(df, var, group_var)</code> that takes a data frame (<code>df</code>), a variable (<code>var</code>), and a grouping variable (<code>group_var</code>) as inputs, and returns a summary table showing the count, mean, and standard deviation of the variable <code>var</code> grouped by <code>group_var</code>. The function should remove any <code>NA</code> values in <code>var</code> when computing these summary statistics. The object returned should be a single data frame / tibble (not a vector).</p>
+</section>
+<section id="var_histdf-var-bins-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="var_histdf-var-bins-solo-10">4) <code>var_hist(df, var, bins)</code> [SOLO, 10%]</h3>
+<p>Write the function <code>var_hist(df, var, bins)</code> that takes a data frame (<code>df</code>), a variable (<code>var</code>), and the number of bins (<code>bins</code>) as inputs, and returns a histogram of that variable with a user-specified number of bins as a ggplot object. The default number of bins should be <code>30</code>.</p>
+</section>
+<section id="scatterplotdf-x-y-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="scatterplotdf-x-y-solo-10">5) <code>scatterplot(df, x, y)</code> [SOLO, 10%]</h3>
+<p>Write the function <code>scatterplot(df, x, y)</code> that takes a data frame (<code>df</code>) and two variables (<code>x</code> and <code>y</code>) as inputs, and returns a scatter plot of those two variables as a ggplot object.</p>
+</section>
+</section>
+<section id="iteration-across-lists-with-purrr" class="level2">
+<h2 class="anchored" data-anchor-id="iteration-across-lists-with-purrr">Iteration across lists with <code>purrr</code></h2>
+<section id="problems-using-word_list" class="level3">
+<h3 class="anchored" data-anchor-id="problems-using-word_list">Problems using <code>word_list</code></h3>
+<p>For these questions, we will work with the <code>sentences</code> vector that comes loaded with the <code>stringr</code> package (which is loaded when you load the <code>tidyverse</code> package):</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stringr<span class="sc">::</span>sentences)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [1] "The birch canoe slid on the smooth planks." 
+#&gt; [2] "Glue the sheet to the dark blue background."
+#&gt; [3] "It's easy to tell the depth of a well."     
+#&gt; [4] "These days a chicken leg is a rare dish."   
+#&gt; [5] "Rice is often served in round bowls."       
+#&gt; [6] "The juice of lemons makes fine punch."</code></pre>
+</div>
+</div>
+<p>This vector contains lots of random sentences. When we break those sentences into individual words using <code>str_split()</code>, we will get a <em>list</em> back where each item in the list is a vector of words:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>word_list <span class="ot">&lt;-</span> <span class="fu">str_split</span>(stringr<span class="sc">::</span>sentences, <span class="st">" "</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>word_list[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>#&gt; [[1]]
+#&gt; [1] "The"     "birch"   "canoe"   "slid"    "on"      "the"     "smooth" 
+#&gt; [8] "planks."
+#&gt; 
+#&gt; [[2]]
+#&gt; [1] "Glue"        "the"         "sheet"       "to"          "the"        
+#&gt; [6] "dark"        "blue"        "background."
+#&gt; 
+#&gt; [[3]]
+#&gt; [1] "It's"  "easy"  "to"    "tell"  "the"   "depth" "of"    "a"     "well."</code></pre>
+</div>
+</div>
+<p>We will use this <code>word_list</code> for questions 6 - 8.</p>
+</section>
+<section id="collaborative-5" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-5">6) [COLLABORATIVE, 5%]</h3>
+<p>Using <code>map()</code>, write R code to obtain a vector of how many words are in each item in <code>word_list</code>.</p>
+</section>
+<section id="collaborative-5-1" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-5-1">7) [COLLABORATIVE, 5%]</h3>
+<p>Using <code>map()</code>, write R code to obtain a vector of the total number of characters in each item in <code>word_list</code>.</p>
+</section>
+<section id="collaborative-5-2" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-5-2">8) [COLLABORATIVE, 5%]</h3>
+<p>Using <code>map()</code>, write R code to obtain a vector of the number of times the word <code>"the"</code> appears in each item in <code>word_list</code>. Your result should ignore casing, so both <code>"the"</code> and <code>"The"</code> should count.</p>
+</section>
+<section id="problems-using-sw_people" class="level3">
+<h3 class="anchored" data-anchor-id="problems-using-sw_people">Problems using <code>sw_people</code></h3>
+<p>As we saw in class, the <code>sw_people</code> list contains a list of information about each character in Star Wars. You can load the list from the <code>repurrrsive</code> package:</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(repurrrsive)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We will use the <code>sw_people</code> and <code>sw_films</code> lists for questions 9 &amp; 10.</p>
+</section>
+<section id="collaborative-10" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-10">9) [COLLABORATIVE, 10%]</h3>
+<p>Using <code>map()</code> and the <code>sw_films</code> list, write R code to obtain a vector of integers that contains the number of characters in each Star Wars film.</p>
+</section>
+<section id="collaborative-10-1" class="level3">
+<h3 class="anchored" data-anchor-id="collaborative-10-1">10) [COLLABORATIVE, 10%]</h3>
+<p>Using <code>map_df()</code>, create a data frame where each row represents a character from <code>sw_people</code>. The columns should contain the following:</p>
+<ul>
+<li><code>name</code>: The character’s name, as a character.</li>
+<li><code>height</code>: The character’s height, as a number</li>
+<li><code>is_male</code>: Whether the character’s gender is <code>"male"</code> (<code>TRUE</code> or <code>FALSE</code>)</li>
+<li><code>film_count</code>: The number of films they have appeared in, as an integer.</li>
+</ul>
+</section>
+<section id="solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="solo-10">11) [SOLO, 10%]</h3>
+<p>For the last problem, write your own homework question that requires the student (you) to use <code>map()</code> in the solution. You can use any lists of data you want for your question (e.g.&nbsp;<code>sw_people</code>, <code>sw_films</code>, <code>got_chars</code>, etc.). Then provide the answer to your question. As with all the other questions, if you use an AI tool to help you create and / or solve your question, include the prompt you used and comment on any changes you had to make to improve your outcome.</p>
+</section>
+<section id="read-and-reflect-solo-10" class="level3">
+<h3 class="anchored" data-anchor-id="read-and-reflect-solo-10">12) Read and reflect [SOLO, 10%]</h3>
+<p>Read and reflect on the following readings to preview what we will be covering next:</p>
+<blockquote class="blockquote">
+<ul>
+<li>Chapter 25 (Web scraping) in Hadley Wickham’s book R4DS: <a href="https://r4ds.hadley.nz/webscraping.html">https://r4ds.hadley.nz/webscraping.html</a></li>
+<li>This post on accessing and collecting data with APIs in R: <a href="https://statisticsglobe.com/api-in-r">https://statisticsglobe.com/api-in-r</a></li>
+</ul>
+</blockquote>
+<p>Afterwards, in a comment (<code>#</code>) in your .R file, write a short reflection on what you’ve learned and any questions or points of confusion you have about what we’ve covered thus far. This can just few a few sentences related to this assignment, next week’s readings, things going on in the world that remind you something from class, etc. If there’s anything that jumped out at you, write it down.</p>
+</section>
+<section id="submit" class="level3">
+<h3 class="anchored" data-anchor-id="submit">Submit</h3>
+<p><a href="https://p4a.seas.gwu.edu/2024-Spring/faq.html#how-do-i-make-a-zip-file-for-my-homework">Create a zip file</a> of all the files in your R project folder for this assignment, then submit your zip file on the corresponding assignment submission on Blackboard.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
