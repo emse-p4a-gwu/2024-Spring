@@ -869,6 +869,26 @@ Loaded automatically with `library(tidyverse)`
 
 ---
 
+class: center, middle 
+
+# Why "`purrr`"?
+
+--
+
+<center>
+<img src="images/go_brrr.png" width=950>
+</center>
+
+---
+
+class: center, middle 
+
+# Why "`purrr`"?
+
+> ## "Make your **pure** functions **purr** with **purrr**"<br>- [Hadley Wickham](https://github.com/tidyverse/purrr/issues/35#issuecomment-71395551)
+
+---
+
 class: center, middle
 
 ## `purrr::map(x, f, ...)`
