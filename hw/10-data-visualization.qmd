@@ -75,7 +75,7 @@ Once you've chosen a data set, open your `hw10.R` file and begin exploring the d
 
 **Do not brush this step off** - the more thoroughly you inspect your dataset, the easier (and better) you data exploration will be. This will be absolutely critical for making your charts. Make sure you take the time to develop an understanding of the variables in your dataset as it is nearly impossible to imagine what different charts might be worth creating otherwise.
 
-### 4) Make charts [50%]
+### 4) Make charts [40%]
 
 Now that you have a basic understanding of the dataset, make some charts to explore the variables in the data and their potential relationships. You may use base R plotting functions or the **ggplot2** package to make your figures, but you must make at least two different types of figures, including:
 
@@ -91,7 +91,7 @@ Below the code for each of your charts, write a description and interpretation o
 1. Describe what variables you are plotting and why.
 2. Describe the primary relationship / trend / information you hope the reader will gain from your visualization.
 
-### 6) Save your charts [5%]
+### 6) Save your charts [15%]
 
 At the bottom of your `hw10.R` file, write code to save each of your three charts in the `figs` folder. Save them as .png files.
 
