@@ -93,7 +93,7 @@ Below the code for each of your charts, write a description and interpretation o
 
 ### 6) Save your charts [15%]
 
-At the bottom of your `hw10.R` file, write code to save each of your three charts in the `figs` folder. Save them as .png files.
+At the bottom of your `hw10.R` file, write code to save each of your charts in the `plots` folder. Save them as .png files.
 
 ### 7) Read and reflect [SOLO, 10%]
 
