@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Webscraping</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="John Paul Helveston" />
+    <meta name="date" content="2024-04-18" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <meta name="description" content="EMSE 4571 / 6571: Intro to Programming for Analytics"/>
+    <meta name="generator" content="xaringan and remark.js"/>
+    <meta name="github-repo" content="emse-p4a-gwu/2024-Spring"/>
+    <meta name="twitter:title" content="Webscraping"/>
+    <meta name="twitter:description" content="EMSE 4571 / 6571: Intro to Programming for Analytics"/>
+    <meta name="twitter:url" content="https://p4a.seas.gwu.edu/2024-Spring/"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:creator" content="@johnhelveston"/>
+    <meta name="twitter:site" content="@johnhelveston"/>
+    <meta property="og:title" content="Webscraping"/>
+    <meta property="og:description" content="EMSE 4571 / 6571: Intro to Programming for Analytics"/>
+    <meta property="og:url" content="https://p4a.seas.gwu.edu/2024-Spring/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="article:author" content="John Paul Helveston"/>
+    <link href="libs/countdown/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown/countdown.js"></script>
+    <link rel="stylesheet" href="css/lexis.css" type="text/css" />
+    <link rel="stylesheet" href="css/lexis-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: middle, inverse
+
+.leftcol30[
+
+&lt;center&gt;
+&lt;img src="https://github.com/emse-p4a-gwu/emse-p4a-gwu.github.io/blob/master/images/logo.png?raw=true" width=250&gt;
+&lt;/center&gt;
+
+]
+
+.rightcol70[
+
+# Week 12: .fancy[Webscraping]
+
+### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg> EMSE 4571 / 6571: Intro to Programming for Analytics
+### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"/></svg> John Paul Helveston
+### <svg aria-hidden="true" role="img" viewBox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> April 18, 2024
+
+]
+
+---
+
+
+
+class: inverse, middle
+
+# Week 12: .fancy[Webscraping]
+
+### 1. Scraping static pages
+### 2. Scraping multiple pages
+
+### BREAK
+
+### 3. Using APIs
+
+---
+
+#### Some disclaimers ([here](https://r4ds.hadley.nz/webscraping.html#scraping-ethics-and-legalities) for more details)
+
+You're probably okay if the data is:
+
+- Public
+- Non-personal
+- Factual
+
+Otherwise, consult a lawyer and / or maybe don't scrape it.
+
+#### Terms of service
+
+Generally are not upheld, unless you **need an account to access the data**.
+
+#### Copyright
+
+Data is not copyright protected (in the US). But works are. Be careful.
+
+---
+
+class: center, middle 
+
+## Another good resource:&lt;br&gt;https://www.zyte.com/learn/web-scraping-best-practices/
+
+---
+
+
+
+class: inverse, middle
+
+# Week 12: .fancy[Webscraping]
+
+### 1. HTML basics
+### 1. Scraping static pages
+### 2. Scraping multiple pages
+
+### BREAK
+
+### 3. Using APIs
+
+---
+
+## **H**yper**T**ext **M**arkup **L**anguage 
+
+
+```html
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id='first'&gt;A heading&lt;/h1&gt;
+  &lt;p&gt;Some text &amp;amp; &lt;b&gt;some bold text.&lt;/b&gt;&lt;/p&gt;
+  &lt;img src='myimg.png' width='100' height='100'&gt;
+&lt;/body&gt;
+```
+
+HTML has a hierarchical structure formed by:
+
+- Start and end **"tags"** (e.g. `&lt;tag&gt;` and `&lt;/tag&gt;`)
+- Optional attributes (e.g. `id='first'`)
+- Contents (everything in between the start and end tag).
+
+---
+
+.leftcol[
+
+## Common tags
+
+- `&lt;h1&gt;` = Header level 1
+- `&lt;a&gt;` = [Url]() link
+- `&lt;b&gt;` = **Bold** text 
+- `&lt;i&gt;` = _Italic_ text
+- `&lt;p&gt;` = Paragraph
+- `&lt;li&gt;` = List item
+
+]
+
+.rightcol[
+
+## Attributes
+
+- `id`: Element identifier, e.g.&lt;br&gt;`&lt;h1 id='first'&gt;A heading&lt;/h1&gt;`
+- `class`: Styling class, e.g.&lt;br&gt;`&lt;h1 class='header'&gt;A heading&lt;/h1&gt;`
+
+]
+
+---
+
+class: middle
+
+.leftcol40[
+
+# Quick example
+
+- Go [here](https://rvest.tidyverse.org/articles/starwars.html)
+- Right-click, select&lt;br&gt;"View Page Source"
+
+]
+
+.rightcol60[
+
+https://rvest.tidyverse.org/articles/starwars.html
+&lt;center&gt;
+&lt;img src="images/view-source.png" width=100%&gt;
+&lt;/center&gt;
+
+]
+
+---
+
+## **Strategy**: Use tags and classes to parse html
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+* &lt;h1 id='first'&gt;A heading&lt;/h1&gt;
+  &lt;p&gt;Some text &amp;amp; &lt;b&gt;some bold text.&lt;/b&gt;&lt;/p&gt;
+  &lt;img src='myimg.png' width='100' height='100'&gt;
+&lt;/body&gt;
+```
+
+]
+
+--
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+* html_elements("h1")
+```
+
+
+```
+#&gt; {xml_nodeset (1)}
+#&gt; [1] &lt;h1 id="first"&gt;A heading&lt;/h1&gt;
+```
+
+]
+
+---
+
+## **Strategy**: Use tags and classes to parse html
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id='first'&gt;A heading&lt;/h1&gt;
+* &lt;p&gt;Some text &amp;amp; &lt;b&gt;some bold text.&lt;/b&gt;&lt;/p&gt;
+  &lt;img src='myimg.png' width='100' height='100'&gt;
+&lt;/body&gt;
+```
+
+]
+
+--
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+* html_elements("p")
+```
+
+
+```
+#&gt; {xml_nodeset (1)}
+#&gt; [1] &lt;p&gt;Some text &amp;amp; &lt;b&gt;some bold text.&lt;/b&gt;&lt;/p&gt;
+```
+
+]
+
+---
+
+## Dealing with multiple nodes (bullet list example)
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;167 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;96 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class='weight'&gt;66 kg&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+]
+
+.rightcol[
+
+Rendered source code (in a browser)
+
+<ul>
+  <li><b>C-3PO</b> is a <i>droid</i> that weighs <span class='weight'>167 kg</span></li>
+  <li><b>R4-P17</b> is a <i>droid</i></li>
+  <li><b>R2-D2</b> is a <i>droid</i> that weighs <span class='weight'>96 kg</span></li>
+  <li><b>Yoda</b> weighs <span class='weight'>66 kg</span></li>
+</ul>
+
+]
+
+---
+
+## Dealing with multiple nodes (bullet list example)
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;167 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;96 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class='weight'&gt;66 kg&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+
+
+
+]
+
+--
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+* html_elements("li")
+```
+
+
+```
+#&gt; {xml_nodeset (4)}
+#&gt; [1] &lt;li&gt;\n&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class="weight"&gt;167 kg&lt;/span&gt;\n&lt;/li&gt;
+#&gt; [2] &lt;li&gt;\n&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;\n&lt;/li&gt;
+#&gt; [3] &lt;li&gt;\n&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class="weight"&gt;96 kg&lt;/span&gt;\n&lt;/li&gt;
+#&gt; [4] &lt;li&gt;\n&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class="weight"&gt;66 kg&lt;/span&gt;\n&lt;/li&gt;
+```
+
+]
+
+---
+
+## Extract the names with `"b"`
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;167 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;96 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class='weight'&gt;66 kg&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+]
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+  html_elements("li") %&gt;% 
+* html_element("b")
+```
+
+
+```
+#&gt; {xml_nodeset (4)}
+#&gt; [1] &lt;b&gt;C-3PO&lt;/b&gt;
+#&gt; [2] &lt;b&gt;R4-P17&lt;/b&gt;
+#&gt; [3] &lt;b&gt;R2-D2&lt;/b&gt;
+#&gt; [4] &lt;b&gt;Yoda&lt;/b&gt;
+```
+
+]
+
+---
+
+## Extract the _text_ with `html_text2()`
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;167 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;96 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class='weight'&gt;66 kg&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+]
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+  html_elements("li") %&gt;% 
+  html_element("b") %&gt;% 
+* html_text2()
+```
+
+
+```
+#&gt; [1] "C-3PO"  "R4-P17" "R2-D2"  "Yoda"
+```
+
+]
+
+---
+
+## Extract the weights using `".weight"` class
+
+.leftcol[
+
+`source_code`
+
+
+```html
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;C-3PO&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;167 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R4-P17&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;R2-D2&lt;/b&gt; is a &lt;i&gt;droid&lt;/i&gt; that weighs &lt;span class='weight'&gt;96 kg&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;Yoda&lt;/b&gt; weighs &lt;span class='weight'&gt;66 kg&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+```
+
+]
+
+.rightcol[
+
+Use `{rvest}` package to parse html
+
+
+```r
+library(rvest)
+
+html &lt;- read_html(source_code)
+
+html %&gt;% 
+  html_elements("li") %&gt;% 
+* html_element(".weight") %&gt;%
+* html_text2()
+```
+
+
+```
+#&gt; [1] "167 kg" NA       "96 kg"  "66 kg"
+```
+
+]
+
+---
+
+## Putting it together in a data frame
+
+
+.leftcol45[
+
+
+```r
+library(rvest)
+
+items &lt;- read_html(source_code) %&gt;% 
+  html_elements("li")
+```
+
+
+
+]
+
+.rightcol55[
+
+
+```r
+data &lt;- tibble(
+  name = items %&gt;% 
+    html_element("b") %&gt;% 
+    html_text2(), 
+  weight = items %&gt;% 
+    html_element(".weight") %&gt;% 
+    html_text2() %&gt;% 
+    parse_number()
+) 
+
+data
+```
+
+```
+#&gt; # A tibble: 4 × 2
+#&gt;   name   weight
+#&gt;   &lt;chr&gt;   &lt;dbl&gt;
+#&gt; 1 C-3PO     167
+#&gt; 2 R4-P17     NA
+#&gt; 3 R2-D2      96
+#&gt; 4 Yoda       66
+```
+
+]
+
+---
+
+### `html_table()` is awesome (if the site uses an HTML table)
+
+.leftcol[
+
+Some pages have HTML tables in the source code, e.g. 
+
+https://www.ssa.gov/international/coc-docs/states.html
+
+&lt;center&gt;
+&lt;img src="images/state-table.png" width=100%&gt;
+&lt;/center&gt;
+
+]
+
+--
+
+.rightcol[
+
+
+```r
+url &lt;- "https://www.ssa.gov/international/coc-docs/states.html"
+df &lt;- read_html(url) %&gt;% 
+* html_table()
+
+df
+```
+
+```
+#&gt; [[1]]
+#&gt; # A tibble: 56 × 2
+#&gt;    X1                   X2   
+#&gt;    &lt;chr&gt;                &lt;chr&gt;
+#&gt;  1 ALABAMA              AL   
+#&gt;  2 ALASKA               AK   
+#&gt;  3 AMERICAN SAMOA       AS   
+#&gt;  4 ARIZONA              AZ   
+#&gt;  5 ARKANSAS             AR   
+#&gt;  6 CALIFORNIA           CA   
+#&gt;  7 COLORADO             CO   
+#&gt;  8 CONNECTICUT          CT   
+#&gt;  9 DELAWARE             DE   
+#&gt; 10 DISTRICT OF COLUMBIA DC   
+#&gt; # ℹ 46 more rows
+```
+
+]
+
+---
+
+## Find elements with [SelectorGadget](https://chrome.google.com/webstore/detail/selectorgadget/mhjhnkcfbdhnjickkkdbjoemdmbfginb?hl=en) 
+
+&lt;center&gt;
+&lt;img src="images/selectorgadget.png" width=100%&gt;
+&lt;/center&gt;
+
+---
+
+## Find elements with "inspect"
+
+&lt;center&gt;
+&lt;img src="images/p4a.png" width=1000&gt;
+&lt;/center&gt;
+
+---
+
+class: inverse
+
+<div class="countdown" id="timer_662027c6" style="top:0;right:0;font-size:2em;" data-warnwhen="30">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+## Your turn
+
+Scrape data on famous quotes from
+http://quotes.toscrape.com/
+
+Your resulting data frame should have these fields:
+
+- `quote`: The quote
+- `author`: The author of the quote
+- `about_url`: The url to the "about" page
+
+
+```
+#&gt; Rows: 10
+#&gt; Columns: 3
+#&gt; $ quote     &lt;chr&gt; "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”", "“It is our choices, Harry, that show what we truly are, far more than our abilities.”", "“There are only two w…
+#&gt; $ author    &lt;chr&gt; "Albert Einstein", "J.K. Rowling", "Albert Einstein", "Jane Austen", "Marilyn Monroe", "Albert Einstein", "André Gide", "Thomas A. Edison", "Eleanor Roosevelt", "Steve Martin"
+#&gt; $ about_url &lt;chr&gt; "http://quotes.toscrape.com/author/Albert-Einstein", "http://quotes.toscrape.com/author/J-K-Rowling", "http://quotes.toscrape.com/author/Albert-Einstein", "http://quotes.toscrape.com/author/Jane-Austen", "http://quotes.toscrape.co…
+```
+
+---
+
+
+
+class: inverse, middle
+
+# Week 12: .fancy[Webscraping]
+
+### 1. HTML basics
+### 1. Scraping static pages
+### 2. Scraping multiple pages
+
+### BREAK
+
+### 3. Using APIs
+
+---
+
+class: center, middle, inverse 
+
+# What if there is more than one page to scrape?
+
+--
+
+&lt;br&gt;
+
+# .orange[Use a loop!]
+
+---
+
+# Iterative scraping!
+
+&lt;br&gt;
+
+## 1. Find the url pattern
+## 2. Scrape one page
+## 3. Iteratively scrape each page with `map_df()`
+
+---
+
+## 1. Find the url pattern
+
+Example: http://quotes.toscrape.com/
+
+url to page 2: http://quotes.toscrape.com/page/2
+
+Pattern: `http://quotes.toscrape.com/page/` + `#`
+
+--
+
+&lt;br&gt;
+
+I can _build_ the url to any page with `paste()`:
+
+
+```r
+root &lt;- "http://quotes.toscrape.com/page/"
+page &lt;- 3
+url &lt;- paste(root, page, sep = "")
+url
+```
+
+```
+#&gt; [1] "http://quotes.toscrape.com/page/3"
+```
+
+---
+
+## 2. Scrape one page
+
+.leftcol[
+
+Build the url to a single page:
+
+
+```r
+root &lt;- "http://quotes.toscrape.com/page/"
+page &lt;- 3
+url &lt;- paste(root, page, sep = "")
+*url
+```
+
+```
+#&gt; [1] "http://quotes.toscrape.com/page/3"
+```
+
+]
+
+.rightcol[
+
+Scrape the data on that page: 
+
+
+```r
+*quote_nodes &lt;- read_html(url) %&gt;%
+    html_elements(".quote")
+df &lt;- tibble(
+    quote = quote_nodes %&gt;%
+        html_element(".text") %&gt;%
+        html_text(),
+    author = quote_nodes %&gt;%
+        html_element(".author") %&gt;%
+        html_text(), 
+    about_url = quote_nodes %&gt;%
+        html_element("a") %&gt;% 
+        html_attr("href")
+) %&gt;% 
+    mutate(about_url = paste0(url, about_url))
+```
+
+]
+
+---
+
+## 3. Iteratively scrape each page with `map_df()`
+
+.leftcol55[
+
+Make a function to get data from a page:
+
+.code70[
+
+
+```r
+get_page_data &lt;- function(page) {
+    root &lt;- "http://quotes.toscrape.com/page/"
+    url &lt;- paste(root, page, sep = "")
+    quote_nodes &lt;- read_html(url) %&gt;% 
+        html_elements(".quote")
+    df &lt;- tibble(
+        quote = quote_nodes %&gt;%
+            html_element(".text") %&gt;%
+            html_text(),
+        author = quote_nodes %&gt;%
+            html_element(".author") %&gt;%
+            html_text(), 
+        about_url = quote_nodes %&gt;%
+            html_element("a") %&gt;% 
+            html_attr("href")
+    ) %&gt;% 
+        mutate(about_url = paste0(url, about_url))
+    return(df)
+}
+```
+
+]]
+
+--
+
+.rightcol45[
+
+Iterate with `map_df()`:
+
+.code70[
+
+
+```r
+pages &lt;- 1:10
+
+df &lt;- map_df(pages, \(x) get_page_data(x))
+```
+
+]]
+
+---
+
+class: inverse
+
+<div class="countdown" id="timer_66202794" style="top:0;right:0;font-size:2em;" data-warnwhen="30">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+## Your turn
+
+Template code is provided to scrape data on F1 drivers for the 2022 season from
+https://www.formula1.com/en/results.html/2022/drivers.html
+
+Your job is to extend it to scrape the data from seasons 2010 to 2024.
+
+Your final dataset should look like this:
+
+
+```
+#&gt; # A tibble: 6 × 8
+#&gt;    year position first   last       abb   nationality team                 points
+#&gt;   &lt;dbl&gt;    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;                 &lt;int&gt;
+#&gt; 1  2022        1 Max     Verstappen VER   NED         Red Bull Racing RBPT    454
+#&gt; 2  2022        2 Charles Leclerc    LEC   MON         Ferrari                 308
+#&gt; 3  2022        3 Sergio  Perez      PER   MEX         Red Bull Racing RBPT    305
+#&gt; 4  2022        4 George  Russell    RUS   GBR         Mercedes                275
+#&gt; 5  2022        5 Carlos  Sainz      SAI   ESP         Ferrari                 246
+#&gt; 6  2022        6 Lewis   Hamilton   HAM   GBR         Mercedes                240
+```
+
+---
+
+class: inverse, center
+
+# .fancy[Intermission]
+
+<div class="countdown" id="timer_6620256a" style="top:1;right:0;bottom:0;left:0;margin:5%;font-size:8em;" data-warnwhen="30">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+---
+
+
+
+class: inverse, middle
+
+# Week 12: .fancy[Webscraping]
+
+### 1. HTML basics
+### 1. Scraping static pages
+### 2. Scraping multiple pages
+
+### BREAK
+
+### 3. Using APIs
+
+---
+
+class: center, middle, inverse
+
+# Hopefully you won't need to scrape
+
+---
+
+# Before you start scraping, ask...
+
+&lt;br&gt;
+
+## 1. Is there a formatted dataset I can download?&lt;br&gt;(e.g. see [this page](https://eda.seas.gwu.edu/2023-Fall/finding-data.html))
+
+--
+
+## 2. Is there an API I can use?
+
+---
+
+class: middle 
+
+# .center[Application Programming Interface (API)]
+
+&lt;br&gt;
+
+&gt; A set of defined rules that enable different applications to communicate (and pass data) with each other
+
+--
+
+&lt;br&gt;
+
+#### .center[Basically, APIs make it easier to get data from the web]
+
+---
+
+# APIs use the `url` to "ask" a website for data 
+
+### **Example**: Stock market prices from https://www.alphavantage.co/
+
+--
+
+API Request:&lt;br&gt;https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&amp;symbol={symbol}&amp;apikey={api_key}&amp;datatype=csv
+
+- `function`: The time series of your choice
+- `symbol`: Stock price symbol (e.g. `NFLX` = Netflix)
+- `apikey`: Your API key (have to register to get one)
+- `datatype`: `csv` or `json`
+
+---
+
+## Setting up your API key
+
+### 1. Register for a key here: https://www.alphavantage.co/support/#api-key
+### 2. Store your key in your `.Renviron`:
+
+
+```r
+usethis::edit_r_environ()
+```
+
+### 3. Store your key:
+
+
+```r
+ALPHAVANTAGE_API_KEY={your_key}
+```
+
+### 4. Retrieve your key: 
+
+
+```r
+api_key &lt;- Sys.getenv("ALPHAVANTAGE_API_KEY")
+```
+
+---
+
+## Using your key to get data
+
+.leftcol55[
+
+
+```r
+api_key &lt;- Sys.getenv("ALPHAVANTAGE_API_KEY")
+symbol &lt;- "NFLX" # Netflix
+
+# Build the url data request
+
+url &lt;- paste0(
+  "https://www.alphavantage.co/query", 
+  "?function=TIME_SERIES_DAILY",
+  "&amp;symbol=", symbol, 
+  "&amp;apikey=", api_key, 
+  "&amp;datatype=csv"
+)
+
+# Read in the data
+
+df &lt;- readr::read_csv(url)
+```
+
+]
+
+--
+
+.rightcol45[
+
+
+```r
+glimpse(df)
+```
+
+```
+#&gt; Rows: 100
+#&gt; Columns: 6
+#&gt; $ timestamp &lt;date&gt; 2024-04-16, 2024-04-15, 2024-04-12, 2024-04-11, 2024-04-10, 2024-04-09, 2024-04-08, 2024-04-05, 2024-04-04, 2024-04-03, 2024-04-02, 2024-04-01, 2024-03-28, 2024-03-27, 2024-03-26, 2024-03-25, 2024-03-22, 2024-03-21, 2024-03-20, 2…
+#&gt; $ open      &lt;dbl&gt; 607.500, 630.170, 628.230, 624.420, 610.970, 631.990, 636.390, 624.920, 633.210, 612.745, 611.000, 608.000, 614.990, 629.010, 625.200, 627.900, 624.160, 630.650, 619.950, 615.620, 613.560, 622.920, 615.000, 613.370, 600.210, 608.0…
+#&gt; $ high      &lt;dbl&gt; 622.4500, 630.1700, 633.1199, 631.6600, 620.1400, 631.9900, 639.0000, 637.9100, 638.0000, 630.4100, 615.0300, 615.1100, 615.0000, 631.3500, 634.3899, 630.4600, 629.0500, 634.3617, 629.5050, 621.2800, 627.4100, 622.9200, 620.8000, …
+#&gt; $ low       &lt;dbl&gt; 607.5000, 603.8710, 618.9150, 617.2400, 609.3400, 615.6347, 628.1100, 622.7100, 616.5800, 611.5000, 605.5101, 605.5710, 601.5900, 610.7300, 619.1836, 623.1600, 621.0000, 622.3300, 618.3400, 608.0000, 610.4481, 603.8200, 607.3500, …
+#&gt; $ close     &lt;dbl&gt; 617.52, 607.15, 622.83, 628.78, 618.58, 618.20, 628.41, 636.18, 617.14, 630.08, 614.21, 614.31, 607.33, 613.53, 629.24, 627.46, 628.01, 622.71, 627.69, 620.74, 618.39, 605.88, 613.01, 609.45, 611.08, 600.93, 604.82, 608.51, 597.69…
+#&gt; $ volume    &lt;dbl&gt; 3519122, 3085394, 2959269, 2662662, 2806248, 2135639, 2129483, 3327195, 3008557, 2913989, 2018210, 2063845, 3708803, 2628267, 2804453, 1803264, 2135688, 2507671, 2639509, 2142613, 3344244, 6671629, 3110468, 2178292, 2798854, 24793…
+```
+
+]
+
+---
+
+## Using your key to get data
+
+.leftcol55[
+
+
+```r
+df %&gt;% 
+    ggplot() + 
+    geom_line(
+      aes(
+        x = timestamp, 
+        y = close
+      )
+    ) + 
+    theme_bw() +
+    labs(
+        x = "Date",
+        y = "Closing Price ($USD)", 
+        title = paste0("Stock Prices: ", symbol)
+    )
+```
+
+]
+
+.rightcol45[
+
+&lt;img src="figs/unnamed-chunk-48-1.png" width="504" /&gt;
+
+]
+
+---
+
+class: center, middle
+
+# Want something else? 
+
+# Read the docs!
+
+## https://www.alphavantage.co/documentation/
+
+---
+
+class: inverse
+
+<div class="countdown" id="timer_662027fe" style="top:0;right:0;font-size:2em;" data-warnwhen="30">
+<code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+### Your turn: COVID case data from https://covidactnow.org/
+
+1. Register for a key here: https://apidocs.covidactnow.org/
+2. Edit your .Renviron:&lt;br&gt;`usethis::edit_r_environ()`
+3. Store your key as `COVID_ACT_NOW_KEY`
+4. Load your API key:&lt;br&gt;`api_key &lt;- Sys.getenv("COVID_ACT_NOW_KEY")`
+5. Build the url to request historical state-level data
+6. Read in the data, then make this figure of daily COVID19 cases in DC
+
+&lt;img src="figs/covid_dc-1.png" width="864" /&gt;
+
+---
+
+# [HW12](https://p4a.seas.gwu.edu/2024-Spring/hw/12-webscraping.html)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
