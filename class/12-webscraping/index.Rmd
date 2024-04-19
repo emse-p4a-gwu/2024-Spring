@@ -885,7 +885,7 @@ usethis::edit_r_environ()
 ```{r}
 #| eval: false
 
-ALPHAVANTAGE_API_KEY={your_key}
+ALPHAVANTAGE_API_KEY=ka8hi45qi2j5ja657fj963
 ```
 
 ### 4. Retrieve your key: 
