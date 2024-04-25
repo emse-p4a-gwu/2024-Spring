@@ -67,6 +67,13 @@ For this reflection, please reflect on what we have covered in this class, then 
 
 Write your reflection in a comment (`#`) in your .R file.
 
+### 8) Surveys 🙏
+
+This is not for credit, but _please_, _please_, _please_ fill out the course surveys. It's SUPER important that I hear from you so I can learn what is and is not working in this class. Both are anonymous, so be as honest as possible:
+
+- [Official GW Course Evaluation](https://gwu.smartevals.com/): The official survey GW uses to evaluate how good a job I'm doing.
+- [Unofficial survey](https://forms.gle/iabhiMqVQk9iPpHa8): This is a survey I put together each year where you can provide me direct, anonymous feedback about things specific to this course.
+
 ### Submit
 
 {{< var hw_submit >}}
